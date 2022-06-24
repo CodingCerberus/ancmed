@@ -1,0 +1,795 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+/******************************************
+/* Header
+/*******************************************/
+
+
+html {
+  background-color: rgb(249, 249, 249);
+  font-size: 10px;
+}
+
+html * {
+  font-family: "spartan", sans-serif;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  height: 600px;
+}
+
+header * {
+  font-family: "spartan", sans-serif;
+  font-weight: 700;
+  color: rgb(41, 41, 41);
+  font-size: 2rem;
+}
+
+header h1, div.sideMenuLogo h1 {
+  padding-top: 2px;
+  padding-left: 18px;
+  font-weight: 700;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
+}
+
+header span {
+  font-size: 46px;
+  font-weight: 100;
+  color: rgb(89, 89, 89);
+  padding-top: 7px;
+  margin-left: 5px;
+}
+
+header li {
+  font-weight: 400;
+}
+
+header div {
+  padding-left: 85px;
+  padding-top: 50px;
+}
+
+header div a {
+position: relative;
+z-index: 3;
+}
+
+header > div * {
+  float: left;
+}
+
+header img, div.sideMenuLogo img {
+  height: 46px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+}
+
+header li {
+  padding: 20px 10px;
+}
+
+nav#menuButton, nav.staticNoAction {
+  position: absolute;
+  width: 45px;
+  top: 50px;
+  right: 69px;
+  padding-bottom: 7px;
+  padding-right: 5px;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+nav#menuButton span, nav.staticNoAction span {
+  display: block;
+  height: 1px;
+  border-bottom: solid 2px rgb(56, 56, 56);
+  width: 30px;
+  transition: 0.7s;
+}
+
+nav#menuButton {
+  z-index: 2;
+}
+
+nav#menuButton:hover :nth-child(1){
+width: 0;
+transition: 1s;
+}
+
+nav#menuButton:hover :nth-child(2){
+  width: 0;
+  transition: 1s;
+  transition-delay: 0.2s; 
+}
+
+nav#menuButton:hover :nth-child(3){
+  width: 0;
+  transition: 1s;
+  transition-delay: 0.4s; 
+}
+
+nav.staticNoAction {
+  z-index: 0;
+}
+
+nav.staticNoAction span {
+  border-bottom: solid 2px rgb(187, 187, 187);
+}
+
+/* Search Specific Styling for header */
+
+/* header .searchHeaderDecor * {
+  border: 1px solid rebeccapurple;
+} */
+
+header section.searchHeaderDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 600px;
+}
+
+.headerImageLeft, .headerImageRight {
+  padding: 0;
+}
+
+div.headerImageLeft {
+  height: 600px;
+  width: 45%;
+  background-image: url("../img/searchtexture.jpg");
+}
+
+div.headerImageLeft h1 {
+  position: relative;
+  margin-top: 170px;
+  margin-left: 80px;
+  padding-left: 0;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 7rem;
+  z-index: 5;
+}
+
+
+div.headerImageRight {
+  height: 600px;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+div.headerImageRight img {
+  width: auto;
+  height: 65%;
+}
+
+
+/******************************************
+/* Main Body
+/*******************************************/
+
+/* Top search section */
+
+div.searchTop { /* Top box as a whole */
+  position: relative;
+  margin-left: 80px;
+  margin-right: 80px;
+  height: 200px;
+  display: flex;
+  margin-top: -100px;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  background-color: white;
+  z-index: 6;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.keywordBox, .regionBox {
+  /* border: 1px solid red; */
+  width: auto;
+  flex: 1;
+}
+
+.keywordBox > *, .regionBox > * {
+  margin-right: 9%;
+
+}
+
+.regionBox > * {
+
+  margin-left: 9%;
+}
+
+.keywordBox h3, .regionBox h3, .absoluteDateBox h3 {
+  margin-top: 16px;
+  margin-bottom: 41px;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: rgb(39, 39, 39);
+}
+
+.absoluteDateBox h3, .sliderContainer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.keywordBox input {
+  border: none;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  width: 91%;
+  background-image: url("img/searchiconsmall.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  caret-color: grey;
+  line-height: 1.5em;
+  font-size: 1.6rem;
+}
+
+.keywordBox input[type=text]:focus {
+  outline: none;
+}
+
+
+section.absoluteDateBox {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 33.5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+h3.searchTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.searchButton div {
+  height: 100%;
+  border-radius: 5px;
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.searchButton input {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/searchiconwhitesmall.png);
+  border-radius: inherit;
+  background-color: inherit;
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  cursor: pointer;
+}
+
+
+
+/* second search line */
+
+div.searchLists, div.searchListsBottom {
+  margin-left: 80px;
+  margin-right: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+
+div.searchLists > section, div.searchListsBottom > section {
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+div.searchLists  > section:first-child, div.searchListsBottom > section:first-child {
+  margin-left: 0;
+}
+
+div.searchLists > section:last-child, div.searchListsBottom > section:last-child {
+  margin-right: 0;
+}
+
+div.searchLists > section, div.searchListsBottom > section {
+  height: 74px;
+  border-radius: 37px;
+  background-color: white;
+  flex: 1;
+}
+
+#resetAllBtn {
+  height: 100%;
+  border-radius: 37px;
+  background-color: white;
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  /* box-shadow: inset 0 0 10px white; */
+}
+
+.searchButton div, #resetAllBtn {
+  background-color: rgb(234, 193, 136);
+}
+
+/* expanding searches */
+
+.collapsible {
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 1.6em;
+  padding-top: 30px;
+}
+
+
+.content {
+  padding: 0 18px;
+  width: 100%;
+  max-height: 0px;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  overflow: hidden;
+  margin-left: 0;
+  background-color: white;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible:after {
+  content: '\142F';
+  font-size: 0.8rem;
+  color: rgb(56, 56, 56);
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.active {
+  background-color: white;
+  border-radius: 37px 37px 0 0;
+}
+
+.active:after {
+  content: "\1431";
+}
+
+.searchLists section *{
+  position: relative;
+  z-index: 3;
+} 
+
+
+.searchListsBottom section *{
+  position: relative;
+  z-index: 2;
+}
+
+div.spacerLine {
+  width: 100%;
+  border: 1px solid rgb(204, 204, 204);
+  margin-bottom: 24px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 10px;
+}
+
+div.spacerDiv {
+  width: 100%;
+  height: 24px;
+}
+
+
+.searchOptionWrapper select:focus, .searchOptionWrapper option:focus {
+  outline: none;
+}
+
+.searchOptionWrapper select {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
+
+.searchOptionWrapper option {
+  font-size: 1.6rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*specific styling for choose region */
+
+section.regionBox h4{
+  padding-top: 7px;
+  margin-top: -2px;
+  padding-left: 28px;
+  padding-right: 0;
+  padding-bottom: 24px;
+  width: inherit;
+  height: inherit;
+  color: rgb(125, 125, 125);
+  background-image: url(/img/locationpointersmall.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+section.regionBox h4.active {
+  border-radius: 0;
+}
+
+
+
+
+/*scroll bar styling*/
+
+/* width */
+.searchOptionWrapper select::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.searchOptionWrapper select::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(242, 242, 242)
+}
+ 
+/* Handle */
+.searchOptionWrapper select::-webkit-scrollbar-thumb {
+  background: rgb(206, 206, 206); 
+  border-radius: 10px;
+}
+
+/* turn off original query table */
+
+form.originalTable {
+  display: none;
+}
+
+/* end*/
+
+
+span.numberOfResults {
+  font-size: 1.6rem;
+  margin-left: 84px;
+  margin-bottom: 16px;
+  position: relative;
+  display: block;
+}
+
+
+
+div.resultsWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+
+section.displayResultsWrapper {
+  display: flex;
+  margin-left: 80px;
+  margin-right: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.displayResultsWrapper a {
+  width: 16%;
+  height: 325px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+
+/* search results styling */
+
+div.objectWrapper {
+  height: 100%;
+}
+
+.thumbnailWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  margin: auto;
+}
+
+.thumbnailWrapper img {
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+section.displayResultsWrapper a:hover img {
+  max-height: 90%;
+  max-width: 90%;
+  transition: 0.1s;
+}
+
+.objectWrapper h4 {
+  font-weight: 500;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.objectWrapper span {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.spanSpacer {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.greySpacer {
+  color: #CFCBC6;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+section.displayResultsWrapper a:hover {
+  background-color: rgb(248, 248, 248);
+  box-shadow: 10px 10px 25px rgb(204, 204, 204);
+  transition: 0.3s;
+}
+
+
+/******************************************
+/* Footer
+/*******************************************/
+
+
+
+footer {
+  display: block;
+  clear: both;
+  background-color: rgb(249, 249, 249);
+  margin-top: 220px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin: 20px 24px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+footer li.socialMedia {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #CFCBC6;
+}
+
+footer li.socialMedia i {
+  color: white;
+}
+
+footer li.rightAlign {
+  margin-right: 24px;
+  margin-left: auto;
+}
+
+.rightGutter {
+  margin-right: 74px;
+  margin-left: 0;
+}
+
+.leftGutter {
+margin-left: 74px;
+margin-right: 0;
+}
+
+footer li.leftAlign {
+  margin-right: auto;
+}
+
+li.invisible {
+  visibility: hidden;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 135px;
+  padding-bottom: 20px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* Slide Out Menu */
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: rgb(211, 211, 211);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.3 second transition effect to slide in the sidenav */
+}
+
+.sidenav * {
+  white-space: nowrap;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(38, 38, 38);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 57px;
+  right: 72px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Further Side Menu Customisation */
+
+.sideMenuLogo h1 {
+  display: inline;
+  position: absolute;
+  left: auto;
+}
+
+
+div.sideMenuLogo {
+  position: absolute;
+  top: 43px;
+  left: 44px;
+}
+
+.sideMenuLinks {
+  margin-top: 100px;
+  margin-left: 70px;
+  padding-left: 0;
+}
+
+.sideMenuLinks a {
+  font-size: 1.6rem;
+  width: fit-content;
+  padding-left: 0;
+  margin-top: 48px;
+}
+
+.searchContainer {
+  height: auto;
+  width: 60%;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+
+
+.searchContainer img {
+  height: 15px;
+  margin-left: -7px;
+}
+
+.searchContainer * {
+  border-width: 0;
+  background-color: rgb(211, 211, 211);
+}
+
+.searchContainer form {
+  border-bottom: solid 1px rgb(56, 56, 56);
+  padding-bottom: 10px;
+}
+
+.searchContainer * {
+  height: inherit;
+}
+
+.searchContainer input {
+  font-size: 1.6rem;
+  font-weight: 300;
+  width: 90%;
+}
+
+.searchContainer input[type=text]:focus {
+  outline: none;
+}
+
+
+a.closebtn {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+a.closebtn nav span {
+  display: block;
+  height: 1px;
+  border-bottom: solid 2px rgb(56, 56, 56);
+  width: 30px;
+  margin-bottom: 7px;
+}

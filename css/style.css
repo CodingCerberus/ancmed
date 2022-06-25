@@ -307,7 +307,7 @@ div.relatedObjects { /*need display overflow here, done in main.js*/
   /* justify-content: space-between; */
 }
 
-div.relatedObjects a:nth-child(2n+3) {
+div.relatedObjects a:nth-child(3n+2) {
   margin-left: 2.75%;
   margin-right: 2.75%;
 }

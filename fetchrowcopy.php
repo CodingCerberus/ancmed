@@ -195,8 +195,8 @@ echo '<header id="blurHeader">
 <div>
    <a href="index.html">
       <img src="img/logoflatsmallsimple.png" alt="AncMed Logo" class="logo">
-      <h1>Ancient Mediterranean<br>
-         Digital Project</h1>
+      <h1>Ancient Mediterranean</h1>
+      <h1>Digital Project</h1>
    </a>
 </div>
 

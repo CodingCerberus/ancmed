@@ -132,18 +132,22 @@ section.mainBody {
   background: linear-gradient(rgb(235, 235, 235), rgb(249, 249, 249) 70px);
   clear: both;
   width: 100%;
+  min-height: 600px;
+}
+
+.mainBody section {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 2rem;
 }
 
 .sectionOne {
-  width: 50%;
-  margin: 0 auto;
   padding-top: 40px;
-  font-size: 16px;
 }
 
 .sectionOne h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   padding-bottom: 20px;
 }
 
@@ -156,13 +160,26 @@ div.mainText p {
 }
 
 .sectionOne, div.mainText {
-  line-height: 2.5rem;
+  line-height: 3rem;
 }
-
 
 section.sectionOne {
   padding-bottom: 30px;
 }
+
+
+section.logoHolder {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoHolder img {
+  max-height: 120px;
+  max-width: 120px;
+}
+
 
 
 /******************************************

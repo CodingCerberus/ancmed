@@ -42,6 +42,10 @@ header h1, div.sideMenuLogo h1 {
   font-size: 1.8rem;
 }
 
+section.logoTextContainer h1 {
+  display: block;
+}
+
 header span {
   font-size: 46px;
   font-weight: 100;

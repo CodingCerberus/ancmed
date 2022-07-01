@@ -240,8 +240,10 @@ echo '<header id="blurHeader">
    <a href="index.html">
       <div>
          <img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
-         <h1>Ancient Mediterranean</h1>
-         <h1>Digital Project</h1>
+         <section class="logoTextContainer">
+            <h1>Ancient Mediterranean</h1>
+            <h1>Digital Project</h1>
+         </section>
       </div>
    </a>
 </div>
@@ -264,7 +266,7 @@ echo '<header id="blurHeader">
 
 <section class="mainBody" id="blurMainBody">
 
-   <form method="post" action="fetchrowcopy.php">
+   <form method="post" action="search.php">
       <div class="searchTop">
          <section class="keywordBox">
             <h3 class="searchTitle">Keyword</h3>
@@ -437,7 +439,7 @@ echo '<section class="displayResultsWrapper">';
  }
 
  echo '</section>
- <form class="originalTable" method="post" action="fetchrowcopy.php">
+ <form class="originalTable" method="post" action="search.php">
  <table class="table">
 <tr>
    <td>Region</td>

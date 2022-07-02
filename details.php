@@ -95,8 +95,10 @@ $row = $_GET['row'];
 			<div>
 				<a href="index.html">
 					<img src="img/logoonwhite.png" alt="AncMed Logo" class="logo">
-					<h1>Ancient Mediterranean<br>
-						Digital Project</h1>
+					<section class="logoTextContainer">
+           				<h1>Ancient Mediterranean</h1>
+            			<h1>Digital Project</h1>
+         			</section>
 				</a>
 			</div>
 			
@@ -129,8 +131,10 @@ $row = $_GET['row'];
 				<a href="index.html">
 					<div>
 						<img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
-						<h1>Ancient Mediterranean<br>
-							Digital Project</h1>
+						<section class="logoTextContainer">
+            				<h1>Ancient Mediterranean</h1>
+            				<h1>Digital Project</h1>
+         				</section>
 					</div>
 				</a>
 			</div>

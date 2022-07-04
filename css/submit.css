@@ -168,9 +168,6 @@ div.mainText {
   margin-top: 30px;
 }
 
-div.mainText p {
-  text-align: justify;
-}
 
 .sectionOne, div.mainText {
   line-height: 3rem;
@@ -180,19 +177,46 @@ section.sectionOne {
   padding-bottom: 30px;
 }
 
+form {
+  width: 100%;
+}
 
-section.logoHolder {
-  margin-top: 40px;
+.formLineOne,
+.formLineTwo {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 20px;
 }
 
-.logoHolder img {
-  max-height: 120px;
-  max-width: 120px;
+.formLineThree {
+  margin-bottom: 20px;
 }
 
+.inputWrapper { /*wraps label input/select-option */
+  display: flex;
+  width: 100%;
+}
+
+.inputWrapper label {
+  flex-grow: 0;
+  padding-right: 10px;
+}
+
+.inputWrapper input,
+.inputWrapper select,
+.inputWrapper textarea { /*lets input field grow to fit remaining width*/
+  flex-grow: 1;
+}
+
+.inputWrapper:first-child { /*space between name/email, submission/publish */
+  margin-right: 5%;
+}
+
+button {
+  clear: all;
+  float: right;
+  padding-top: 3px;
+}
 
 
 /******************************************

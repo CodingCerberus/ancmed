@@ -13,7 +13,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&family=Spartan:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/sponsors.css">
+		<link rel="stylesheet" href="css/submit.css">
 		<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
 	</head>
 
@@ -89,10 +89,49 @@
 			<section class="sectionOne">
 				<h2>Submit new object</h2>
 				<div class="mainText">
-				<!-- <p>Please provide any further information on the submission deemed necessary, including pertinent references on the find and its context, current location, as well as whether or not you hold the copyright and consent to it being shared in the database.  
+					<form action="https://formsubmit.co/jacksonpayne92@hotmail.com" method="POST" enctype="multipart/form-data">
+						<div class="formLineOne">
+							<div class="inputWrapper">
+								<label for="name">Name:</label>
+								<input id= name type="text" name="name" required>
+							</div>
 
-					Photographs, drawings, and bibliographical references are all welcome as attachments.</p>
-				</div> -->
+							<div class="inputWrapper">
+								<label for="email">Email:</label>
+								<input id='email' type="email" name="email" required>
+							</div>
+						</div>
+
+						<div class="formLineTwo">
+							<div class="inputWrapper">
+								<label for="submissionType">Submission Type:</label>
+								<select id="submissionType" name="submissionType" size="3">
+									<option value="Object">Object</option>
+									<option value="Reference">Reference</option>
+									<option value="Correction">Correction</option>
+								</select>
+							</div>
+
+							<div class="inputWrapper">
+								<label for="publicationStatus">Publication Status:</label>
+								<select id="publicationStatus" name="publicationStatus" size="2">
+									<option value="Published">Published</option>
+									<option value="Unpublished">Unpublished</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="formLineThree">
+							<div class="inputWrapper">
+								<label class="tooltip" for="comments">Comments:</label>
+								<textarea id="comments" name="comments" rows="5"></textarea>
+							</div>
+						</div>
+
+						<input class="tooltip" type="file" name="attachment" accept="image/*, .doc, .docm, .docx, .dot, .dotx, .pdf">
+
+						<button type="submit">Submit</button>
+				   </form>
 			</section>
 
 			

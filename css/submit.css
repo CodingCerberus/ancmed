@@ -164,6 +164,13 @@ section.mainBody {
   padding-bottom: 20px;
 }
 
+.thankYouHeader h2 { /*just for the thank you page */
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
 div.mainText {
   margin-top: 30px;
 }
@@ -185,27 +192,60 @@ form {
 .formLineTwo {
   width: 100%;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .formLineThree {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.inputWrapper { /*wraps label input/select-option */
-  display: flex;
+.formLineThree .inputWrapper { /*wide comment box */
   width: 100%;
 }
 
-.inputWrapper label {
-  flex-grow: 0;
-  padding-right: 10px;
+.inputWrapper { /*wraps label input/select-option */
+  width: 50%;
 }
 
-.inputWrapper input,
-.inputWrapper select,
-.inputWrapper textarea { /*lets input field grow to fit remaining width*/
-  flex-grow: 1;
+.inputWrapper input {
+  width: 100%;
+}
+
+select,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+select option {
+  padding-top: 2px;
+  padding-left: 20px;
+  background-image: url(/img/tickbox_empty.png);
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position-y: 0.1em;
+  background-color: #f9f9f9;
+}
+
+select {
+  border: none;
+}
+
+select:focus,
+option:focus {
+  outline: none;
+}
+
+select option:checked {
+  background-image: url(/img/tickbox_filled.png);
+  background-color: #f9f9f9;
+}
+
+
+
+/* width */
+select::-webkit-scrollbar {
+  display: none;
 }
 
 .inputWrapper:first-child { /*space between name/email, submission/publish */

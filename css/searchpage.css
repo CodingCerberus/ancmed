@@ -391,14 +391,21 @@ div.searchLists > section, div.searchListsBottom > section {
 }
 
 .collapsible:after {
-  content: '\142F';
-  font-size: 0.8rem;
+  content: ' ';
+  background-image: url(/img/down-arrow1.png);
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position-y: -.2em;
+  font-size: 1em;
   color: rgb(56, 56, 56);
+  width: 1.6em;
+  height: 1.6em;
   float: right;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 4px;
 }
+
 
 .active {
   background-color: white;
@@ -406,7 +413,8 @@ div.searchLists > section, div.searchListsBottom > section {
 }
 
 .active:after {
-  content: "\1431";
+  content: " ";
+  background-image: url(/img/up-arrow1.png);
 }
 
 .searchLists section *{
@@ -448,6 +456,16 @@ div.spacerDiv {
   font-size: 1.6rem;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 20px;
+  background-image: url(/img/tickbox_empty.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 1em;
+  background-position-y: 0.4em;
+}
+
+.searchOptionWrapper option:checked {
+  background-image: url(/img/tickbox_filled.png);
 }
 
 /*specific styling for choose region */

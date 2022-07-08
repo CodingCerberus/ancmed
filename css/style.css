@@ -146,36 +146,6 @@ nav#menuButton:hover :nth-child(3){
   transition-delay: 0.4s; 
 }
 
-/* nav#menuButton:hover :nth-child(3){
-  animation-name: span1;
-  animation-duration: 1s;
-  animation-delay: 0.4s;
-} */
-
-/* 
-nav:hover :nth-child(1) {
-  width: 10px;
-  transition: 0.5s;
-}
-
-nav:hover :nth-child(2) {
-  width: 15px;
-  transition: 0.7s;
-}
-
-nav:hover :nth-child(3) {
-  width: 20px;
-  transition: 0.9s;
-} */
-/* 
-@keyframes span1 {
-  from{width: 30px;
-  }
-
-  to{
-    width: 0px;
-  }
-} */
 
 nav.staticNoAction {
   z-index: 0;
@@ -383,7 +353,7 @@ div.relatedObjects a:hover img {
 }
 
 div.relatedObjects a:hover {
-  background-color: rgb(248, 248, 248);
+  background-color: white;
   box-shadow: 10px 10px 25px rgb(204, 204, 204);
   transition: 0.3s;
 }
@@ -559,6 +529,11 @@ section.flexContainer .splide__track {
   padding-bottom: 5px;
   padding-left: 10px !important;
   padding-right: 10px !important;
+}
+
+#thumbnail-slider .splide__slide {
+  background-size: contain !important;
+  background-color: white !important;
 }
 
 /*THIS SECTION IS BECAUSE OF SPLIDE*/

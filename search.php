@@ -158,7 +158,7 @@ $conn->query($q0);
 
 
 // mysql_set_charset('utf8', $conn);
-  echo $SQL;
+//  echo $SQL;
 
  $query = "SELECT main.id as id, main.title as title, main.number as number, main.medium_search as medium_search, main.findspot_site_search as findspot_site_search,
            main.date_absolute as date_absolute, main.date_entry as date_entry, main.date_notes as date_notes, main.date_range_start as date_range_start, 

@@ -258,7 +258,8 @@ echo '<header id="blurHeader">
       </form>
    </div>
    <a href="index.html">Map</a>
-   <a href="bibliography.html">Bibliography</a>
+   <a href="bibliography.php">Bibliography</a>
+   <a href="glossary.html">Glossary</a>
    <a href="submit.html">Submit</a>
    <a href="sponsors.html">Sponsors</a>
    <a href="about.html">About</a>
@@ -505,7 +506,7 @@ echo '<section class="displayResultsWrapper">';
     <li class="invisible leftAlign socialMedia"><i class="fa-brands fa-twitter"></i></li>
 
     <li><a href="index.html">Home</a></li>
-    <li><a href="search.html">Search Database</a></li>
+    <li><a href="search.php">Search Database</a></li>
     <li><a href="submit.html">Submit</a></li>
     <li><a href="sponsors.html">Sponsors</a></li>
     <li><a href="about.html">About</a></li>

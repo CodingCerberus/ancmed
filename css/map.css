@@ -1,0 +1,3 @@
+#map {  /*map div must have a define height, as per leaflet instructions */
+    height: 900px
+}

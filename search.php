@@ -176,6 +176,8 @@ $conn->query($q0);
 <meta name="description" content="C15 Item Page; AncMed">
 <meta name="keywords" content="one, two, three">
 
+<title>AncMed: Database Search</title>
+
 <link rel="shortcut icon" href="img/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

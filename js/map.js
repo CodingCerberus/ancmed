@@ -6,7 +6,7 @@
 // }).addTo(map);
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiamFja3NvbnBheW5lOTIiLCJhIjoiY2wxcGh5OXVnMDlvbTNkb2E2Y2lweXRreiJ9.YvoVIUUagcWxK3WZ0XQBBA';
-var map = L.map('map').setView([37.55707727145785, 15.425115117722063], 5);
+var map = L.map('map').setView([37.55707727145785, 15.425115117722063], 6);
 
 // Add tiles from the Mapbox Static Tiles API
 // (https://docs.mapbox.com/api/maps/#static-tiles)

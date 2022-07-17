@@ -1,3 +1,41 @@
 #map {  /*map div must have a define height, as per leaflet instructions */
-    height: 100vh;
+    /* height: calc(100vh - 144px) */
+    height: 100%;
+    z-index: 0 !important;
+}
+
+/* Map Menu */
+
+
+.mapSection {
+    height: calc(100vh - 144px);
+}
+
+#mapFilters * {
+    background-color: white;
+}
+
+#mapFilters {
+    position: absolute;
+    top: 144px;
+    left: 0;
+    z-index: 99;
+    height: calc(100vh - 144px);
+    width: calc(16% + 15px);
+}
+
+.drawIcon {
+    height: 100%;
+    width: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.drawIcon img {
+    width: 100%;
+}
+
+.leaflet-control-zoom {
+    margin-left: 25px !important;
 }

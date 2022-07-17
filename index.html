@@ -21,9 +21,9 @@
 		<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
 		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
 		crossorigin=""></script>
-		<link rel="stylesheet" href="css/map.css">
 		<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
 		<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+		<link rel="stylesheet" href="css/map.css">
 	</head>
 	<body>
 		<header>
@@ -47,9 +47,16 @@
 			</nav>
 		</header>
 
+		<section class="mapSection">
+			<div id="mapFilters">
+				<div class="drawIcon" >
+					<img src="img/right-arrow.png" alt="right arrow">
+				</div>
+			</div>
 
-		<div id="map"></div>
-
+			<div id="map"></div>
+		
+		</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/map.js"></script>

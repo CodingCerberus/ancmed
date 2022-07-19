@@ -4,7 +4,10 @@
     z-index: 0 !important;
 }
 
-/* Map Menu */
+
+/* ////////////////////////
+Map Menu 
+//////////////////////// */
 
 
 .mapSection {
@@ -21,12 +24,17 @@
     left: 0;
     z-index: 99;
     height: calc(100vh - 144px);
-    width: calc(16% + 15px);
+    width: calc(16% + 25px);
+    display: flex;
+}
+
+.filtersList {
+    width: 100%;
 }
 
 .drawIcon {
     height: 100%;
-    width: 15px;
+    width: 25px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -36,6 +44,31 @@
     width: 100%;
 }
 
+
+
+
+/* ////////////////////////
+Leaflet fixes
+///////////////////////// */
+
+/* Correcting pop arrow */
+
+.leaflet-popup-tip {
+    width: 20px;
+    height: 20px;
+    border: none;
+    box-shadow: none;
+    margin-top: -13px;
+}
+
+.leaflet-popup-tip-container {
+    left: 0 !important;
+}
+
+
+
+/*moving zoom control in top left to accomidate side panel (before it's open) */
+
 .leaflet-control-zoom {
-    margin-left: 25px !important;
+    margin-left: 35px !important;
 }

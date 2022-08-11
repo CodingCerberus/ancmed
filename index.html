@@ -25,6 +25,7 @@
 		<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 		<link rel="stylesheet" href="css/map.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/rSlider.min.css">
 		<script src="js/rSlider.min.js"></script>
 	</head>
 	<body>
@@ -45,8 +46,8 @@
 				<ul>
 					<a href="index.html"><li class="currentPage">Home</li></a>
 					<a href="search.php"><li>Search Database</li></a>
-					<a href="glossary.html"><li>Glossary</li></a>
 					<a href="submit.html"><li>Submit</li></a>
+					<a href="glossary.html"><li>Glossary</li></a>
 					<a href="sponsors.html"><li>Sponsors</li></a>
 					<a href="about.html"><li>About</li></a>
 					<a href="donate.html"><li>Donate</li></a>
@@ -215,6 +216,40 @@
 
 		</script>
 
+		<script>
+			var abydos = L.marker([26.185, 31.918889]).addTo(map);
+			//this declares variable using location name, sets marker on the map to the given coordinates, 
+			//and makes the icon appear
+
+			abydos.bindPopup("<p>Abydos</p><p>3 results found</p><a href='ancmed.ac.be/search/asdasd'>see results</a>");
+			//this binds a white box that appears on clicking the marker. if you click on it
+			//the html in the " " is what will be inside it.
+		</script>
+
+<script>
+function SliderChanged(values)
+ {
+   document.getElementById('f1').value = mySlider.getValueStart().toString();
+   document.getElementById('f2').value = mySlider.getValueEnd().toString();
+ }
+ 
+ var mySlider = new rSlider({
+   target: '#slider',
+   values: [2000, 1950, 1900, 1850, 1800, 1750, 1700, 1650, 1600,1550, 1500, 1450, 
+   1400, 1350, 1300, 1250, 1200, 1150, 1100, 1050, 1000, 950, 900, 850, 800, 750, 
+   700, 650, 600, 550, 500],
+   labels: false,
+   scale: false,
+   step:     1,
+   onChange: SliderChanged,
+   range: true // range slider
+});
+var millisecondsToWait = 300;
+setTimeout(function() 
+{
+  mySlider.setValues(" . $f1 . "," . $f2 . ");
+}, millisecondsToWait);
+ </script>
 	
 	</body>
 </html>

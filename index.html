@@ -53,7 +53,56 @@
 					<a href="donate.html"><li>Donate</li></a>
 				</ul>
 			</nav>
+
+			<nav id="menuButton" onclick="openNav()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
+
+			<nav class="staticNoAction">
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
 		</header>
+
+		<div id="mySidenav" class="sidenav">
+
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<nav>
+					<span></span>
+					<span></span>
+					<span></span>
+				</nav>
+			</a>
+
+			<div class="sideMenuLogo">
+				<a href="index.html">
+					<div>
+						<img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
+						<h1>Ancient Mediterranean<br>
+							Digital Project</h1>
+					</div>
+				</a>
+			</div>
+
+			<div class="sideMenuLinks">
+				<div class="searchContainer">
+					<form action="/search.html" autocomplete="off">
+						<button type="submit"><img src="img/searchiconsmall.png"></button>
+						<input type="text" placeholder="Search Database..." name="search">
+					</form>
+				</div>
+				<a href="index.html">Map</a>
+				<a href="bibliography.php">Bibliography</a>
+				<a href="glossary.html">Glossary</a>
+				<a href="submit.html">Submit</a>
+				<a href="sponsors.html">Sponsors</a>
+				<a href="about.html">About</a>
+				<a href="donate.html">Donate</a>
+			</div>
+		</div>
 
 		<section class="mapSection">
 			<div id="mapFilters">

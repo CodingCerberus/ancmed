@@ -46,6 +46,35 @@ Map Menu
 
 
 
+/* ///////////////////////
+Marker Control
+//////////////////////// */
+
+
+
+
+/* ////////////////////////
+Bubble Styling
+///////////////////////// */
+
+.siteName {
+    font-weight: bold;
+}
+
+
+.objectsFound {
+}
+
+.seeResults {
+    clear: all;
+    float: right;
+}
+
+.seeResults,
+.objectsFound {
+    display: block;
+}
+
 
 /* ////////////////////////
 Leaflet fixes

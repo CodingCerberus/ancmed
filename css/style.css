@@ -497,8 +497,18 @@ div#main-slider {
 
 #main-slider .splide__track,
 .splide__slide img {
-  max-height: 75vh;
+  /* max-height: 75vh; */
 }
+
+
+/* this is for fixing gallery height and centering the contents on both axis */
+#main-slider {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .splide__slide {
   opacity: 0.8;

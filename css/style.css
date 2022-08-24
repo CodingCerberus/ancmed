@@ -487,6 +487,7 @@ footer p {
 .splide__slide img {
   max-width: 100%;
   height: auto;
+  max-height: 75vh;
 }
 
 div#main-slider {

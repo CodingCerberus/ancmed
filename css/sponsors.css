@@ -172,6 +172,16 @@ div.mainText p {
   text-align: justify;
 }
 
+div.mainText p + p {
+  padding-top: 20px;
+}
+
+p.signature {
+  padding-top: 20px;
+  /* font-weight: bold; */
+  text-align: right !important;
+}
+
 .sectionOne, div.mainText {
   line-height: 3rem;
 }

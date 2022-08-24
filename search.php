@@ -412,6 +412,8 @@ echo '<header id="blurHeader">
 
 
       </div>
+      <input type="hidden" id="f1" name="f1" value="2000">
+      <input type="hidden" id="f2" name="f2" value="500">
    </form>';
 
 

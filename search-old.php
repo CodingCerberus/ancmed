@@ -8,14 +8,6 @@
 $subSearches = array();
 $subSearchesAssoc = array();
 
-if(htmlspecialchars($_GET["site"]) !== null)
-{
-   $sites = array();
-   array_push($sites, htmlspecialchars($_GET["site"]));
-   $_POST['findspot'] = $sites;
-   session_start();
-}
-
 $f1 = 0;
 $f2 = 0;
 
@@ -57,12 +49,6 @@ if(isset($_POST['general']) && $_POST["general"] != '')
    array_push($subSearches, $GeneralTotal);
    array_push($subSearchesAssoc, "AND");
 }
-
-if (isset($_SESSION['f1']))
-   $_POST['f1'] = $_SESSION['f1'];
-if (isset($_SESSION['f2']))
-   $_POST['f2'] = $_SESSION['f2'];
-
 
 if(isset($_POST['f1']) && isset($_POST['f2']))
 {
@@ -189,6 +175,8 @@ $conn->query($q0);
 <meta charset="UTF-8">
 <meta name="description" content="C15 Item Page; AncMed">
 <meta name="keywords" content="one, two, three">
+
+<title>AncMed: Database Search</title>
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -424,6 +412,8 @@ echo '<header id="blurHeader">
 
 
       </div>
+      <input type="hidden" id="f1" name="f1" value="2000">
+      <input type="hidden" id="f2" name="f2" value="500">
    </form>';
 
 
@@ -631,10 +621,6 @@ $('option').mousedown(function(e) {
  {
     $i = 0;
     $sql = "";
-
-    if (isset($_SESSION[$comboName]))
-      $_POST[$comboName] = $_SESSION[$comboName];
-
    if (isset($_POST[$comboName]))
    {
     $sql = " (";

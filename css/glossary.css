@@ -1,0 +1,9 @@
+div.entryStart {
+display: grid;
+grid-template-columns: max-content auto;
+
+}
+
+div.entryWrapper {
+    grid-template-columns: 27fr;
+}

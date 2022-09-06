@@ -132,9 +132,9 @@ echo '
 	</head>
 	<body>
 		<header>
-			<a href="index.html">
+			<a href="index.php">
 				<div>
-					<a href="index.html">
+					<a href="index.php">
 						<img src="img/logoflatsmallsimple.png" alt="AncMed Logo" class="logo">
 						<section class="logoTextContainer">
 						   <h1>Ancient Mediterranean</h1>
@@ -146,7 +146,7 @@ echo '
 
 			<nav>
 				<ul>
-					<a href="index.html"><li class="currentPage">Home</li></a>
+					<a href="index.php"><li class="currentPage">Home</li></a>
 					<a href="search.php"><li>Search Database</li></a>
 					<a href="submit.html"><li>Submit</li></a>
 					<a href="sponsors.html"><li>Sponsors</li></a>

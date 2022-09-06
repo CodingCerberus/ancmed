@@ -193,7 +193,7 @@ $conn->query($q0);
 echo '<header id="blurHeader">
 			
 <div>
-   <a href="index.html">
+   <a href="index.php">
       <img src="img/logoflatsmallsimple.png" alt="AncMed Logo" class="logo">
       <h1>Ancient Mediterranean</h1>
       <h1>Digital Project</h1>
@@ -237,7 +237,7 @@ echo '<header id="blurHeader">
 </a>
 
 <div class="sideMenuLogo">
-   <a href="index.html">
+   <a href="index.php">
       <div>
          <img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
          <h1>Ancient Mediterranean</h1>
@@ -253,7 +253,7 @@ echo '<header id="blurHeader">
          <input type="text" placeholder="Search Database..." name="search">
       </form>
    </div>
-   <a href="index.html">Map</a>
+   <a href="index.php">Map</a>
    <a href="bibliography.html">Bibliography</a>
    <a href="submit.html">Submit</a>
    <a href="sponsors.html">Sponsors</a>
@@ -500,7 +500,7 @@ echo '<section class="displayResultsWrapper">';
     <li class="invisible leftGutter socialMedia"><i class="fa-brands fa-twitter"></i></li>
     <li class="invisible leftAlign socialMedia"><i class="fa-brands fa-twitter"></i></li>
 
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="search.html">Search Database</a></li>
     <li><a href="submit.html">Submit</a></li>
     <li><a href="sponsors.html">Sponsors</a></li>

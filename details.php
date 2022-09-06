@@ -93,7 +93,7 @@ $row = $_GET['row'];
 		<header id="blurHeader">
 			
 			<div>
-				<a href="index.html">
+				<a href="index.php">
 					<img src="img/logoonwhite.png" alt="AncMed Logo" class="logo">
 					<section class="logoTextContainer">
            				<h1>Ancient Mediterranean</h1>
@@ -128,7 +128,7 @@ $row = $_GET['row'];
 			</a>
 
 			<div class="sideMenuLogo">
-				<a href="index.html">
+				<a href="index.php">
 					<div>
 						<img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
 						<section class="logoTextContainer">
@@ -146,7 +146,7 @@ $row = $_GET['row'];
 						<input type="text" placeholder="Search Database..." name="search">
 					</form>
 				</div>
-				<a href="index.html">Map</a>
+				<a href="index.php">Map</a>
 				<a href="bibliography.php">Bibliography</a>
 				<a href="glossary.html">Glossary</a>
 				<a href="submit.html">Submit</a>
@@ -414,7 +414,7 @@ $row = $_GET['row'];
 				<li class="invisible leftGutter socialMedia"><i class="fa-brands fa-twitter"></i></li>
 				<li class="invisible leftAlign socialMedia"><i class="fa-brands fa-twitter"></i></li>
 
-				<li><a href="../index.html">Home</a></li>
+				<li><a href="../index.php">Home</a></li>
 				<li><a href="../search.php">Search Database</a></li>
 				<li><a href="../submit.html">Submit</a></li>
 				<li><a href="../sponsors.html">Sponsors</a></li>

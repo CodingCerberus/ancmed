@@ -237,20 +237,6 @@ echo '
 		<script type="text/javascript" src="map1.js"></script>
 
 		<script>
-		var abydos = L.marker([26.185, 31.918889]).addTo(map);
-		//this declares variable using location name, sets marker on the map to the given coordinates, 
-		//and makes the icon appear
-		//removing .addTo(map) will cause the pointer to be gone
-		</script>
-
-		<script>
-		abydos.bindPopup("<p>Abydos</p><p>3 results found</p><a href="ancmed.ac.be/search/asdasd">see results</a>");
-		//this binds a white box that appears on clicking the marker. if you click on it
-		//the html in the " " is what will be inside it.
-		//in there at the moment, is location, number of results, and the search link
-		</script>
-
-		<script>
 			function SliderChanged(values)
             {
                 document.getElementById("f1").value = mySlider.getValueStart().toString();

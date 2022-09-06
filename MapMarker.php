@@ -75,7 +75,7 @@ class Processor {
             {
                 $out = $out . "var " . $marker->objectName . " = L.marker([" . 
                       $marker->X . ", " . $marker->Y . "]).addTo(map);\n";
-                $out = $out . $marker->objectName . '.bindPopup("<p>' . $marker->site . '</p><p><a href=\"search.php?site=' . $marker->site . '\">' . $count . ($count==1? ' result' :' results') . ' found</a></p>").openPopup();' . "\n";
+                $out = $out . $marker->objectName . '.bindPopup("<p>' . $marker->site . '</p><p><a href=\"search.php?site=' . $marker->site . '\">' . $count . ($count==1? ' result' :' results') . ' found</a></p>");' . "\n";
             }  
         }
         $myfile = fopen("map1.js", "w");

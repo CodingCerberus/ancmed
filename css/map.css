@@ -30,6 +30,7 @@ Map Menu
 
 .filtersList {
     width: 100%;
+    overflow: auto;
 }
 
 .drawIcon {
@@ -45,6 +46,63 @@ Map Menu
 }
 
 
+
+
+.collapsible {
+    border-radius: 0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+select {
+    width: 100%;
+    border: none;
+}
+
+option {
+    font-size: 1.6rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    background-image: url(/img/tickbox_empty.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 1em;
+    background-position-y: 0.4em;
+ }
+  
+option:checked {
+    background-image: url(/img/tickbox_filled.png);
+}
+
+select:focus, 
+option:focus {
+    outline: none;
+}
+
+
+/*scroll bar styling*/
+
+/* width */
+select::-webkit-scrollbar,
+.filtersList::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+select::-webkit-scrollbar-track,
+.filtersList::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgb(242, 242, 242)
+  }
+   
+  /* Handle */
+select::-webkit-scrollbar-thumb,
+.filtersList::-webkit-scrollbar-thumb {
+    background: rgb(206, 206, 206); 
+    border-radius: 10px;
+  }
 
 /* ///////////////////////
 Marker Control

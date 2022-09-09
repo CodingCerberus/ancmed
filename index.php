@@ -163,59 +163,65 @@ echo '
 					<h2>Map Filters</h2>
 					<form method="post" action="index.php">
 
-						<section>
-							<div class="sliderContainer">
-								<input type="text" id="slider" class="slider">
-							 </div>
-						</section>
+						<div class="filterContainer">
 
-						<section>
-							<h4 class="collapsible">Region</h4>
-							<div class="searchOptionWrapper content">
-						   		<div class="spacerLine"></div>
-								   '. generate_select_list("Region", $region) . '
-						   		<div class="spacerDiv"></div>
-							</div>
-					 		</section>
+							<section>
+								<div class="sliderContainer">
+									<input type="text" id="slider" class="slider">
+								</div>
+							</section>
 
-						<section>
-							<h4 class="collapsible">Medium</h4>
-							<div class="searchOptionWrapper content">
-							<div class="spacerLine"></div>
-									'.generate_select_list("Medium", $medium) .'
-							<div class="spacerDiv"></div>
-							</div>
-						</section>
+							<section>
+								<h4 class="collapsible">Region</h4>
+								<div class="searchOptionWrapper content">
+									<div class="spacerLine"></div>
+									'. generate_select_list("Region", $region) . '
+									<div class="spacerDiv"></div>
+								</div>
+								</section>
 
-						<section>
-							<h4 class="collapsible">Context</h4>
-							<div class="searchOptionWrapper content">
-							<div class="spacerLine"></div>
-									' . generate_select_list("Context", $context) .' 
-							<div class="spacerDiv"></div>
-							</div>
-						</section>
+							<section>
+								<h4 class="collapsible">Medium</h4>
+								<div class="searchOptionWrapper content">
+								<div class="spacerLine"></div>
+										'.generate_select_list("Medium", $medium) .'
+								<div class="spacerDiv"></div>
+								</div>
+							</section>
 
-						<section>
-							<h4 class="collapsible">Ship Type</h4>
-							<div class="searchOptionWrapper content">
-							<div class="spacerLine"></div>
-									' . generate_select_list("ShipType", $ship_type) .'
-							<div class="spacerDiv"></div>
-							</div>
-						</section>
+							<section>
+								<h4 class="collapsible">Context</h4>
+								<div class="searchOptionWrapper content">
+								<div class="spacerLine"></div>
+										' . generate_select_list("Context", $context) .' 
+								<div class="spacerDiv"></div>
+								</div>
+							</section>
 
-						<section>
-							<h4 class="collapsible">Figure Head</h4>
-							<div class="searchOptionWrapper content">
-							<div class="spacerLine"></div>
-									' . generate_select_list("Figureheads", $figureheads) .'
-							<div class="spacerDiv"></div>
-							</div>
-						</section>
-						<input type="hidden" id="f1" name="f1" value="2000">
-						<input type="hidden" id="f2" name="f2" value="500">
-						<section>
+							<section>
+								<h4 class="collapsible">Ship Type</h4>
+								<div class="searchOptionWrapper content">
+								<div class="spacerLine"></div>
+										' . generate_select_list("ShipType", $ship_type) .'
+								<div class="spacerDiv"></div>
+								</div>
+							</section>
+
+							<section>
+								<h4 class="collapsible">Figure Head</h4>
+								<div class="searchOptionWrapper content">
+								<div class="spacerLine"></div>
+										' . generate_select_list("Figureheads", $figureheads) .'
+								<div class="spacerDiv"></div>
+								</div>
+							</section>
+
+							<input type="hidden" id="f1" name="f1" value="2000">
+							<input type="hidden" id="f2" name="f2" value="500">
+
+						</div>
+
+						<section class="filterButtons">
 						<div class="spacerLine"></div>
 							<input type="submit">
 							<div class="spacerDiv"></div>

@@ -30,7 +30,16 @@ Map Menu
 
 .filtersList {
     width: 100%;
+    /* overflow: auto; */
+}
+
+.filterContainer {
     overflow: auto;
+    height: calc(100% - 194px);
+}
+
+.filterButtons {
+    height: 50px;
 }
 
 .drawIcon {

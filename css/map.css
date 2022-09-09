@@ -14,18 +14,17 @@ Map Menu
     height: calc(100vh - 144px);
 }
 
-#mapFilters * {
-    background-color: white;
-}
 
 #mapFilters {
     position: absolute;
     top: 144px;
-    left: 0;
+    left: 0px;
     z-index: 99;
     height: calc(100vh - 144px);
     width: calc(16% + 25px);
     display: flex;
+    background-color: white;
+    transition-duration: 0.2s;
 }
 
 .filtersList {
@@ -33,13 +32,52 @@ Map Menu
     /* overflow: auto; */
 }
 
+.filtersList h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .filterContainer {
     overflow: auto;
     height: calc(100% - 194px);
 }
 
+.sliderContainer {
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: unset !important;
+}
+
+/* .rs-scale > span > ins,
+.rs-container .rs-scale span:first-child::after,
+.rs-container .rs-scale span:last-child::after, {
+    display: none !important;
+} */
+
+.rs-container .rs-scale span:first-child::after,
+.rs-container .rs-scale span:last-child::after,
+.rs-container .rs-scale span:first-child ins,
+.rs-container .rs-scale span:last-child ins {
+    display: none !important;
+}
+
+.rs-scale span ins {
+}
+
 .filterButtons {
     height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.filterButtons input,
+.filterButtons button {
+    height: 30px;
+    width: 45%;
+    border-radius: 50px;
+    border: 1px solid grey;
 }
 
 .drawIcon {

@@ -84,14 +84,14 @@ $conn->query($q0);
 $q0 = "set CHARSET 'utf8'";
 $conn->query($q0);
 
-echo $SQL;
+// echo $SQL;
 
 $query = "SELECT findspot_site_search FROM main " . $SQL ;
 
 $result = $conn->query($query);
 if (!$result) die($conn->error);
 $rows = $result->num_rows;
-echo "Number of sites: " . $rows;
+// echo "Number of sites: " . $rows;
 $sites = array();
 for ($j = 0 ; $j < $rows ; $j++)
  {
@@ -154,11 +154,60 @@ echo '
 					<a href="donate.html"><li>Donate</li></a>
 				</ul>
 			</nav>
+		
+			<nav id="menuButton" onclick="openNav()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
+
+			<nav class="staticNoAction">
+				<span></span>
+				<span></span>
+				<span></span>
+			</nav>
 		</header>
+
+		<div id="mySidenav" class="sidenav">
+
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<nav>
+					<span></span>
+					<span></span>
+					<span></span>
+				</nav>
+			</a>
+
+			<div class="sideMenuLogo">
+				<a href="index.php">
+					<div>
+						<img src="img/logoflatsmall.png" alt="AncMed Logo" class="logo">
+						<h1>Ancient Mediterranean<br>
+							Digital Project</h1>
+					</div>
+				</a>
+			</div>
+
+			<div class="sideMenuLinks">
+				<div class="searchContainer">
+					<form action="/search.html" autocomplete="off">
+						<button type="submit"><img src="img/searchiconsmall.png"></button>
+						<input type="text" placeholder="Search Database..." name="search">
+					</form>
+				</div>
+				<a href="index.php">Map</a>
+				<a href="bibliography.php">Bibliography</a>
+				<a href="glossary.html">Glossary</a>
+				<a href="submit.html">Submit</a>
+				<a href="sponsors.html">Sponsors</a>
+				<a href="about.html">About</a>
+				<a href="donate.html">Donate</a>
+			</div>
+		</div>
 
 		<section class="mapSection">
 			<div id="mapFilters">
-				<div class="filtersList">
+				<div class="filtersList" id="filterMenu">
 
 					<h2>Map Filters</h2>
 					<form method="post" action="index.php">
@@ -222,15 +271,16 @@ echo '
 						</div>
 
 						<section class="filterButtons">
-						<div class="spacerLine"></div>
-							<input type="submit">
-							<div class="spacerDiv"></div>
+
+							<input type="submit" value="Show">
+							<button type="button" onclick="removeOptAll(); removeOptFindspot()" onmousedown="shadowButton();" onmouseup="lightButton();" id="resetAllBtn">Clear all</button>
+
 						</section>
 
 					</form>
 				</div>
 
-				<div class="drawIcon" >
+				<div class="drawIcon" id="filterButton" >
 					<img src="img/right-arrow.png" alt="right arrow">
 				</div>
 			</div>
@@ -241,6 +291,26 @@ echo '
 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="map1.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+
+		<script>
+		function removeOptRegion() { document.getElementById("Region").selectedIndex = "-1"; }
+		function removeOptMedium() { document.getElementById("Medium").selectedIndex = "-1"; }
+		function removeOptContext() { document.getElementById("Context").selectedIndex = "-1"; }
+		function removeOptShipType() { document.getElementById("ShipType").selectedIndex = "-1"; }
+		function removeOptFigureHeads() { document.getElementById("Figureheads").selectedIndex = "-1"; }
+		function removeOptSlider() { mySlider.setValues(2000, 500); }
+		
+		function removeOptAll() 
+		{ 
+		  removeOptRegion();
+		  removeOptMedium();
+		  removeOptContext();
+		  removeOptShipType();
+		  removeOptFigureHeads();
+		  removeOptSlider();
+		}
+		</script>
 
 		<script>
 			function SliderChanged(values)

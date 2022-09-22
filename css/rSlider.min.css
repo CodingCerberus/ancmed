@@ -110,6 +110,10 @@
     width:0
 }
 
+.rs-container .rs-scale span:nth-last-child(2){
+    width:0 !important;
+}
+
 /* .rs-container .rs-scale span:first-child{
     margin-left: 10px;
 } */

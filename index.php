@@ -9,6 +9,9 @@
  $subSearches = array();
  $subSearchesAssoc = array();
 
+ $f1 = 0;
+ $f2 = 0;
+
  session_start();
 
  $Region = get_sql_for_combo("Region", "findspot_region_search", "LIKE");
@@ -257,7 +260,7 @@ echo '
 							</section>
 
 							<section>
-								<h4 class="collapsible">Figure Head</h4>
+								<h4 class="collapsible">Figurehead</h4>
 								<div class="searchOptionWrapper content">
 								<div class="spacerLine"></div>
 										' . generate_select_list("Figureheads", $figureheads) .'
@@ -333,7 +336,7 @@ echo '
 var millisecondsToWait = 300;
 setTimeout(function() 
 {
-  mySlider.setValues(" . $f1 . "," . $f2 . ");
+  mySlider.setValues(' . $f1 . ',' . $f2 . ');
 }, millisecondsToWait);
 		</script>
 

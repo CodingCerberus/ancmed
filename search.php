@@ -59,9 +59,15 @@ if(isset($_POST['general']) && $_POST["general"] != '')
 }
 
 if (isset($_SESSION['f1']))
+{
    $_POST['f1'] = $_SESSION['f1'];
+   unset ($_SESSION['f1']);
+}
 if (isset($_SESSION['f2']))
+{
    $_POST['f2'] = $_SESSION['f2'];
+   unset ($_SESSION['varname']);
+}
 
 
 if(isset($_POST['f1']) && isset($_POST['f2']))

@@ -77,7 +77,9 @@ Map Menu
     height: 30px;
     width: 45%;
     border-radius: 50px;
-    border: 1px solid grey;
+    border-width: 0;
+    background-color: #eac188;
+    color: white;
 }
 
 .drawIcon {
@@ -100,7 +102,26 @@ Map Menu
     border-bottom: none;
     border-left: none;
     border-right: none;
+    padding-right: 8px;
 }
+
+
+.collapsible:after {
+    content: ' ';
+    background-image: url(/img/down-arrow1.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position-y: -.2em;
+    float: right;
+    width: 1em;
+    height: 1em;
+  }
+  
+  .active:after {
+    content: " ";
+    background-image: url(/img/up-arrow1.png);
+  }
+
 
 select {
     width: 100%;
@@ -127,6 +148,9 @@ select:focus,
 option:focus {
     outline: none;
 }
+
+
+
 
 
 /*scroll bar styling*/

@@ -335,12 +335,12 @@ $row = $_GET['row'];
 							// debug_to_console($rowImg['file_path']);	
 
 							echo '<li class="splide__slide">';
-							echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide(1)">';
+							echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide('. ($j + 1) . ')">';
 							echo '<p>' . $rowImg['image_description'] . '</p>
 								<div>
 									<img  class="tooltip mainImageIcons" src="img/copyright_thin_icon_small.png" alt="copyright icon">
 									<span class="tooltiptext">&copy; ' . $rowImg['copyright_information'] . '</span>
-									<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide(1)">
+									<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide('. ($j + 1) . ')">
 								</div>
 							</li>';
 						}
@@ -381,7 +381,7 @@ $row = $_GET['row'];
 							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
 						
 							echo '<div class="slide">
-								<img src="'. $rowImg['file_path'] . '" class="image-slide" alt="Side B" />
+								<img src="'. $rowImg['file_path'] . '" class="image-slide" alt="' . $rowImg['image_description'] . '" />
 								</div>';
 						}
 
@@ -393,7 +393,7 @@ $row = $_GET['row'];
 							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
 						
 							echo '<div class="col">
-									<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide(1)" alt="Side A">
+									<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide('. ($j + 1) . ')" alt="' . $rowImg['image_description'] . '">
 								</div>';
 						}
 					}

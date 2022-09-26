@@ -75,6 +75,7 @@
 					</form>
 				</div>
 				<a href="index.php">Map</a>
+				<a href="search.php">Advanced Search</a>
 				<a href="bibliography.php">Bibliography</a>
 				<a href="glossary.html">Glossary</a>
 				<a href="submit.html">Submit</a>

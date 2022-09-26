@@ -149,7 +149,6 @@ echo '
 
 			<nav>
 				<ul>
-					<a href="index.php"><li class="currentPage">Home</li></a>
 					<a href="search.php"><li>Search Database</li></a>
 					<a href="submit.html"><li>Submit</li></a>
 					<a href="sponsors.html"><li>Sponsors</li></a>
@@ -199,6 +198,7 @@ echo '
 					</form>
 				</div>
 				<a href="index.php">Map</a>
+				<a href="search.php">Advanced Search</a>
 				<a href="bibliography.php">Bibliography</a>
 				<a href="glossary.html">Glossary</a>
 				<a href="submit.html">Submit</a>

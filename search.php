@@ -1,4 +1,4 @@
-<?php //fetchrow.php
+<?php //search.php
  require_once 'login.php';
  require_once 'select_list.php';
  $conn = new mysqli($hn, $un, $pw, $db);
@@ -8,11 +8,11 @@
 $subSearches = array();
 $subSearchesAssoc = array();
 
-if(htmlspecialchars($_GET["site"]) !== null)
+if(htmlspecialchars($_GET["site"]) != null)
 {
    $sites = array();
    array_push($sites, htmlspecialchars($_GET["site"]));
-   $_POST['findspot'] = $sites;
+   $_POST['Findspot'] = $sites;
    session_start();
 }
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['f1']))
 if (isset($_SESSION['f2']))
 {
    $_POST['f2'] = $_SESSION['f2'];
-   unset ($_SESSION['varname']);
+   unset ($_SESSION['f2']);
 }
 
 
@@ -145,6 +145,13 @@ if($ShipType !="")
    array_push($subSearchesAssoc, "AND");
 }
 
+$Findspot = get_sql_for_combo("Findspot", "findspot_site_search", "LIKE");
+if($Findspot !="")
+{
+   array_push($subSearches, $Findspot);
+   array_push($subSearchesAssoc, "AND");
+}
+
 $DecorativeFiller = get_sql_for_combo("DecorativeFiller", "keywords_thematic", "LIKE");
 if($DecorativeFiller !="")
 {
@@ -152,12 +159,6 @@ if($DecorativeFiller !="")
    array_push($subSearchesAssoc, "AND");
 }
 
-$Findspot = get_sql_for_combo("findspot", "findspot_site_search", "LIKE");
-if($Findspot !="")
-{
-   array_push($subSearches, $Findspot);
-   array_push($subSearchesAssoc, "AND");
-}
 
 $SQL = "";
  $i = 0;
@@ -178,7 +179,6 @@ $conn->query($q0);
 
 
 // mysql_set_charset('utf8', $conn);
-//  echo $SQL;
 
  $query = "SELECT main.id as id, main.title as title, main.number as number, main.medium_search as medium_search, main.findspot_site_search as findspot_site_search,
            main.date_absolute as date_absolute, main.date_entry as date_entry, main.date_notes as date_notes, main.date_range_start as date_range_start, 
@@ -193,8 +193,13 @@ $conn->query($q0);
  echo '<html>
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="C15 Item Page; AncMed">
-<meta name="keywords" content="one, two, three">
+<meta name="description" content="Search Page; AncMed">
+<meta property="og:title" content="The Ancient Mediterranean Digital Project">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="An open access database on ancient Mediterranean ships">
+<meta property="og:image" content="https://ancmed.ulb.be/ancmed_logo_social_media.jpg">
+<meta property="og:url" content="https://ancmed.ulb.be/">
+<meta name="twitter:card" content="Ancmed Logo">
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,6 +214,7 @@ $conn->query($q0);
 </style>
 </head>
 <body>';
+
 
 echo '<header id="blurHeader">
 			
@@ -278,7 +284,6 @@ echo '<header id="blurHeader">
       </form>
    </div>
    <a href="index.php">Map</a>
-   <a href="search.php">Advanced Search</a>
    <a href="bibliography.php">Bibliography</a>
    <a href="glossary.html">Glossary</a>
    <a href="submit.html">Submit</a>
@@ -291,6 +296,9 @@ echo '<header id="blurHeader">
 <section class="mainBody" id="blurMainBody">
 
    <form method="post" action="search.php">
+   <input type="hidden" id="f1" name="f1" value="2000">
+   <input type="hidden" id="f2" name="f2" value="500">
+
       <div class="searchTop">
          <section class="keywordBox">
             <h3 class="searchTitle">Keyword</h3>
@@ -366,14 +374,13 @@ echo '<header id="blurHeader">
             <h4 class="collapsible">Findspot</h4>
             <div class="searchOptionWrapper content">
                <div class="spacerLine"></div>
-               ' . generate_select_list("findspot", $findspot) .'
+               ' . generate_select_list("Findspot", $findspot) .'
                <div class="spacerDiv"></div>
             </div>
          </section>
 
          <section id="clearSearch">
-         <button type="button" onclick="removeOptAll(); removeOptFindspot()" onmousedown="shadowButton();" onmouseup="lightButton();" id="resetAllBtn">Clear all</button>
-
+            <button type="button" onclick="removeOptAll();" onmousedown="shadowButton();" onmouseup="lightButton();" id="resetAllBtn">Clear all</button>
          </section>
 
 
@@ -426,25 +433,11 @@ echo '<header id="blurHeader">
                <div class="spacerDiv"></div>
             </div>
          </section>
-
-
-
-
-      </div>
+       </div>
    </form>';
 
-
-
-
-   
+ 
 echo '<span class="numberOfResults">Number of results: ' . $rows . '</span>';
-
-/* echo '<div id="table-wrapper">
-  <div id="table-scroll">
-  <table class="table">';
-
- echo '<tr> <td> Id </td> <td>Title</td> <td>Number</td> <td> Medium </td> <td> Findspot Site </td> <td> Date </td>  <td> Date Entry</td>  <td> Date Notes</td> <td> Technical Features </td> <td> Thematic Features </td> <td> Image </td></tr>';
-*/
 
 echo '<section class="displayResultsWrapper">';
 
@@ -453,7 +446,7 @@ echo '<section class="displayResultsWrapper">';
     $result->data_seek($j);
     $row = $result->fetch_array(MYSQLI_ASSOC);
     $imgInfo = GetImage($row['image_path']);
-    echo '<a href="https://ancmed.ulb.be/details.php?row=' . $row['id'] . '" target="_blank">';
+    echo '<a href="details.php?row=' . $row['id'] . '" target="_blank">';
     echo '<div class="objectWrapper">';
     echo '<div class="thumbnailWrapper"><img src="' . $imgInfo[0] . '" ' . $imgInfo[1] . '></div>';
     echo '<h4>' . $row['medium_search'] . '</h4>';
@@ -512,9 +505,7 @@ echo '<section class="displayResultsWrapper">';
    <td><button type="button" onclick="removeOptSlider()" id="sliderBtn" style="width:100%">Clear</button></td>
    <td><button type="button" onclick="removeOptAll()" id="resetAllBtn" style="width:100%">Clear all</button></td>
  </tr>
- <input type="hidden" id="f1" name="f1" value="2000">
- <input type="hidden" id="f2" name="f2" value="500">
- </table>
+  </table>
  </form>
  </section>
 
@@ -556,7 +547,7 @@ echo '<section class="displayResultsWrapper">';
  function removeOptDecor() { document.getElementById("DecorativeFiller").selectedIndex = "-1"; }
  function removeOptShipType() { document.getElementById("ShipType").selectedIndex = "-1"; }
  function removeOptFigureHeads() { document.getElementById("Figureheads").selectedIndex = "-1"; }
- function removeOptFindspot() { document.getElementById("findspot").selectedIndex = "-1"; }
+ function removeOptFindspot() { document.getElementById("Findspot").selectedIndex = "-1"; }
  function removeOptGenSearch() { document.getElementById("general").value = ""; }
  function removeOptSlider() { mySlider.setValues(2000, 500); }
  

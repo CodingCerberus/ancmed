@@ -73,7 +73,12 @@ $row = $_GET['row'];
 		<meta name="google" content="notranslate">
 		<meta http-equiv="Content-Language" content="en">
     	<meta name="description" content="AncMed: <?php echo $row2['number']; ?>">
-    	<meta name="keywords" content="one, two, three">
+    	<meta property="og:title" content="The Ancient Mediterranean Digital Project">
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="An open access database on ancient Mediterranean ships">
+		<meta property="og:image" content="https://ancmed.ulb.be/ancmed_logo_social_media.jpg">
+		<meta property="og:url" content="https://ancmed.ulb.be/">
+		<meta name="twitter:card" content="Ancmed Logo">
 
 		<title>AncMed: <?php echo $row2['number']; ?></title>
 

@@ -110,6 +110,16 @@ echo '
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
+    	<meta name="description" content="Home Page; AncMed">
+    	<meta property="og:title" content="The Ancient Mediterranean Digital Project">
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="An open access database on ancient Mediterranean ships">
+		<meta property="og:image" content="https://ancmed.ulb.be/ancmed_logo_social_media.jpg">
+		<meta property="og:url" content="https://ancmed.ulb.be/">
+		<meta name="twitter:card" content="Ancmed Logo">
+
+
+
 		<title>AncMed: Homepage</title>
 
 		<!-- external CSS link -->

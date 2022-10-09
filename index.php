@@ -163,7 +163,7 @@ echo '
 					<a href="submit.html"><li>Submit</li></a>
 					<a href="sponsors.html"><li>Sponsors</li></a>
 					<a href="about.html"><li>About</li></a>
-					<a href="donate.html"><li>Donate</li></a>
+					<a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG"><li>Donate</li></a>
 				</ul>
 			</nav>
 		
@@ -214,7 +214,7 @@ echo '
 				<a href="submit.html">Submit</a>
 				<a href="sponsors.html">Sponsors</a>
 				<a href="about.html">About</a>
-				<a href="donate.html">Donate</a>
+				<a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a>
 			</div>
 		</div>
 

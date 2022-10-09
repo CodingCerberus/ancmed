@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="About Page; AncMed">
+		<meta name="description" content="Thank you; AncMed">
     	<meta property="og:title" content="The Ancient Mediterranean Digital Project">
 		<meta property="og:type" content="article" />
 		<meta property="og:description" content="An open access database on ancient Mediterranean ships">
@@ -10,7 +10,7 @@
 		<meta property="og:url" content="https://ancmed.ulb.be/">
 		<meta name="twitter:card" content="Ancmed Logo">
 
-		<title>AncMed: Sponsors</title>
+		<title>AncMed: Thank you</title>
 
 		<!-- external CSS link -->
 		<link rel="shortcut icon" href="img/favicon.ico" />
@@ -18,8 +18,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&family=Spartan:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/sponsors.css">
+		<link rel="stylesheet" href="css/submit.css">
 		<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -79,7 +80,7 @@
 						<input type="text" placeholder="Search Database..." name="search">
 					</form>
 				</div>
-				<a href="index.php">Map</a>				
+				<a href="index.php">Map</a>
 				<a href="search.php">Advanced Search</a>
 				<a href="bibliography.php">Bibliography</a>
 				<a href="glossary.html">Glossary</a>
@@ -93,43 +94,11 @@
 		<section class="mainBody" id="blurMainBody">
 
 
-			<section class="sectionOne">
-				<h2>About</h2>
-				<div class="mainText">
-				<p>The Ancient Mediterranean Digital Project is an open-access database on ship representations 
-					of the Mediterranean basin broadly covering the Late Bronze and Early Iron Age periods. 
-					Initially conceived as a means to publish the catalogue portion of my doctoral 
-					dissertation covering the eastern part of the region, the project has since expanded with 
-					a photogrammetry component, with further plans to include the western part of the basin 
-					in order to provide a holistic view of the entire Mediterranean. Drawing inspiration from 
-					exciting advances in the digital humanities and an ever-growing need for open-access 
-					research tools and digital cultural heritage preservation, the project’s ultimate aim 
-					is to create an up-to-date virtual maritime museum that gathers material which is widely 
-					dispersed in dozens of institutions on multiple continents, a significant portion of 
-					which remains poorly documented or little known.</p>
-					
-				<p>In addition to basic information, 
-					entries are provided with my annotated commentary that covers both the technical and 
-					contextual aspects of the objects, supplemented by my own drawings for a good portion 
-					of the catalogue as well as photogrammetry models. The guiding methodology has been 
-					to approach ship representations as cultural artefacts, providing a historically 
-					situated, context-based analysis that integrates their technical aspects with 
-					socioeconomic practices, cultural significance and attitudes. The advanced database 
-					search engine has likewise been tailored to the specific nautical theme of corpus, while 
-					the interactive map is meant to supplement it with a spatial distribution component. It 
-					is hoped that AncMed can provide, in a convenient and user-friendly format, the research 
-					tools for scholars outside of the discipline to meaningfully use and integrate this 
-					dataset while stimulating future collaborative projects and crowdsourcing. </p>
-					<p class="signature">Dr Tzveta Manolova</p>
-				</div>
+			<section class="thankYouHeader">
+				<h2>Thank you for donating to Ancmed!</h2>
+				
 			</section>
 
-			<!-- <section class="logoHolder">
-				<a href="https://fwa.ulb.be/"><img src="img/Fondation-Wiener-Anspach-Logo.png" alt="Fondation Wiener Anspanch Logo"></a>
-				<a href="https://honorfrostfoundation.org/"><img src="img/Honor-Frost-Foundation.png" alt="Honor Frost Foundation"></a>
-				<a href="https://crea.centresphisoc.ulb.be/"><img src="img/CReA-logo.png" alt="CReA Logo"></a>
-				<a href="https://www.ulb.be/"><img src="img/ULB-logo.png" alt="ULB Logo"></a>
-			</section> -->
 			
 		</section>
 
@@ -160,5 +129,20 @@
 
 
 		<script type="text/javascript" src="js/main.js"></script>
+		<!-- below script is for multi select on single click (needs jquery in head)-->
+		<script>$('option').mousedown(function(e) {
+			e.preventDefault();
+			var originalScrollTop = $(this).parent().scrollTop();
+			console.log(originalScrollTop);
+			$(this).prop('selected', $(this).prop('selected') ? false : true);
+			var self = this;
+			$(this).parent().focus();
+			setTimeout(function() {
+				$(self).parent().scrollTop(originalScrollTop);
+			}, 0);
+			
+			return false;
+		 });</script>
+
 	</body>
 </html>

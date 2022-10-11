@@ -205,6 +205,7 @@ div.entryWrapper {
 .keyReadings h2 {
   font-size: 2.5rem;
   padding-bottom: 20px;
+  padding-top: 5px;
 }
 
 .keyReadings .entryWrapper p {

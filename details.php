@@ -73,12 +73,7 @@ $row = $_GET['row'];
 		<meta name="google" content="notranslate">
 		<meta http-equiv="Content-Language" content="en">
     	<meta name="description" content="AncMed: <?php echo $row2['number']; ?>">
-    	<meta property="og:title" content="The Ancient Mediterranean Digital Project">
-		<meta property="og:type" content="article" />
-		<meta property="og:description" content="An open access database on ancient Mediterranean ships">
-		<meta property="og:image" content="https://ancmed.ulb.be/ancmed_logo_social_media.jpg">
-		<meta property="og:url" content="https://ancmed.ulb.be/">
-		<meta name="twitter:card" content="Ancmed Logo">
+    	<meta name="keywords" content="one, two, three">
 
 		<title>AncMed: <?php echo $row2['number']; ?></title>
 
@@ -152,13 +147,12 @@ $row = $_GET['row'];
 					</form>
 				</div>
 				<a href="index.php">Map</a>
-				<a href="search.php">Advanced Search</a>
 				<a href="bibliography.php">Bibliography</a>
 				<a href="glossary.html">Glossary</a>
 				<a href="submit.html">Submit</a>
 				<a href="sponsors.html">Sponsors</a>
 				<a href="about.html">About</a>
-				<a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a>
+				<a href="donate.html">Donate</a>
 			</div>
 		</div>
 
@@ -333,22 +327,31 @@ $row = $_GET['row'];
 						if (!$result) die($conn->error);
 						$rowsImg = $result->num_rows;
 						
-						for ($j = 0 ; $j < $rowsImg ; $j++)
-						{
-							$result->data_seek($j);
-							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
-							
-							// debug_to_console($rowImg['file_path']);	
+						$individual_images = explode(',', $row2['images']);
 
-							echo '<li class="splide__slide">';
-							echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide('. ($j + 1) . ')">';
-							echo '<p>' . $rowImg['image_description'] . '</p>
-								<div>
-									<img  class="tooltip mainImageIcons" src="img/copyright_thin_icon_small.png" alt="copyright icon">
-									<span class="tooltiptext">&copy; ' . $rowImg['copyright_information'] . '</span>
-									<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide('. ($j + 1) . ')">
-								</div>
-							</li>';
+						for($k = 0 ; $k < count($individual_images) ; $k ++)
+						{
+							for ($j = 0 ; $j < $rowsImg ; $j++)
+							{
+								$result->data_seek($j);
+								$rowImg = $result->fetch_array(MYSQLI_ASSOC);
+								if($rowImg['ID'] == (int)$individual_images[$k])
+								{
+									// debug_to_console($rowImg['file_path']);	
+/**/
+									echo '<li class="splide__slide">';
+									echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide('. ($j + 1) . ')">';
+									echo '<p>' . $rowImg['image_description'] . '</p>
+										<div>
+											<img  class="tooltip mainImageIcons" src="img/copyright_thin_icon_small.png" alt="copyright icon">
+											<span class="tooltiptext">&copy; ' . $rowImg['copyright_information'] . '</span>
+											<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide(1)">
+										</div>
+									</li>';
+
+									break;
+								}
+							}
 						}
 						
 						echo '</ul>
@@ -359,15 +362,20 @@ $row = $_GET['row'];
 								<div id="thumbnail-slider" class="splide">
 								<div class="splide__track">
 									<ul class="splide__list">';
-
-						for ($j = 0 ; $j < $rowsImg ; $j++)
+						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{
-							$result->data_seek($j);
-							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
-						
-							echo '<li class="splide__slide">
-								<img src="'. $rowImg['file_path'] . '">
-								</li>';
+							for ($j = 0 ; $j < $rowsImg ; $j++)
+							{
+								$result->data_seek($j);
+								$rowImg = $result->fetch_array(MYSQLI_ASSOC);
+								if($rowImg['ID'] == (int)$individual_images[$k])
+								{
+									echo '<li class="splide__slide">
+										<img src="'. $rowImg['file_path'] . '">
+										</li>';
+										break;
+								}
+							}
 						}
 
 						echo '			</ul>
@@ -380,27 +388,36 @@ $row = $_GET['row'];
 						echo '<div id="Lightbox" class="modal">
 						<span class="close pointer" onclick="closeLightbox()">&times;</span>
 						<div class="modal-content">';
-
-						for ($j = 0 ; $j < $rowsImg ; $j++)
-						{
-							$result->data_seek($j);
-							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
 						
-							echo '<div class="slide">
-								<img src="'. $rowImg['file_path'] . '" class="image-slide" alt="' . $rowImg['image_description'] . '" />
-								</div>';
-						}
-
-						echo '<div class="dots">';
-
-						for ($j = 0 ; $j < $rowsImg ; $j++)
+						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{
-							$result->data_seek($j);
-							$rowImg = $result->fetch_array(MYSQLI_ASSOC);
-						
-							echo '<div class="col">
-									<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide('. ($j + 1) . ')" alt="' . $rowImg['image_description'] . '">
-								</div>';
+							for ($j = 0 ; $j < $rowsImg ; $j++)
+							{
+								$result->data_seek($j);
+								$rowImg = $result->fetch_array(MYSQLI_ASSOC);
+							
+								if($rowImg['ID'] == (int)$individual_images[$k])
+								{
+									echo '<div class="slide">
+										<img src="'. $rowImg['file_path'] . '" class="image-slide" alt="' . $rowImg['image_description'] . '" />
+										</div>';
+								}
+							}
+
+							echo '<div class="dots">';
+
+							for ($j = 0 ; $j < $rowsImg ; $j++)
+							{
+								$result->data_seek($j);
+								$rowImg = $result->fetch_array(MYSQLI_ASSOC);
+							
+								if($rowImg['ID'] == (int)$individual_images[$k])
+								{								
+									echo '<div class="col">
+										<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide('. ($j + 1) . ')" alt="' . $rowImg['image_description'] . '">
+									</div>';
+								}
+							}
 						}
 					}
 				 
@@ -425,7 +442,7 @@ $row = $_GET['row'];
 				<li><a href="../submit.html">Submit</a></li>
 				<li><a href="../sponsors.html">Sponsors</a></li>
 				<li><a href="../about.html">About</a></li>
-				<li><a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a></li>
+				<li><a href="../donate.html">Donate</a></li>
 
 				<li class="rightAlign socialMedia"><a href="https://twitter.com/Anc_Med" alt="Twitter Profile"><i class="fa-brands fa-twitter"></i></a></li>
 				<li class="socialMedia rightGutter"><a href="https://sketchfab.com/tz.manolova" alt="Sketchfab Profile"><i class="fa-solid fa-cube"></i></a></li>

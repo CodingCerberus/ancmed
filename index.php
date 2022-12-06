@@ -157,7 +157,7 @@ echo '
 				</div>
 			</a>
 
-			<nav>
+			<nav class="headerLinks">
 				<ul>
 					<a href="search.php"><li>Search Database</li></a>
 					<a href="submit.html"><li>Submit</li></a>

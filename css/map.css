@@ -4,21 +4,19 @@
     z-index: 0 !important;
 }
 
-
 /* ////////////////////////
 Map Menu 
 //////////////////////// */
-
 
 .mapSection {
     height: calc(100vh - 144px);
 }
 
-
 #mapFilters {
     position: absolute;
     top: 144px;
-    left: 0px;
+    /* left: 0px; */
+    left: -16%;
     z-index: 99;
     height: calc(100vh - 144px);
     width: calc(16% + 25px);
@@ -94,9 +92,6 @@ Map Menu
     width: 100%;
 }
 
-
-
-
 .collapsible {
     border-radius: 0;
     border-bottom: none;
@@ -117,10 +112,10 @@ Map Menu
     height: 1em;
   }
   
-  .active:after {
+.active:after {
     content: " ";
     background-image: url(/img/up-arrow1.png);
-  }
+}
 
 
 select {
@@ -150,9 +145,6 @@ option:focus {
 }
 
 
-
-
-
 /*scroll bar styling*/
 
 /* width */
@@ -175,12 +167,6 @@ select::-webkit-scrollbar-thumb,
     border-radius: 10px;
   }
 
-/* ///////////////////////
-Marker Control
-//////////////////////// */
-
-
-
 
 /* ////////////////////////
 Bubble Styling
@@ -189,7 +175,6 @@ Bubble Styling
 .siteName {
     font-weight: bold;
 }
-
 
 .objectsFound {
 }
@@ -229,4 +214,35 @@ Leaflet fixes
 
 .leaflet-control-zoom {
     margin-left: 35px !important;
+}
+
+
+/***************** MEDIA QUERIES *****************/
+
+
+
+/* removes header links whhen page is too thin */
+@media only screen and (max-width: 1300px) {
+    .headerLinks{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1670px) {
+    .sideMenuLogo h1{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    #mapFilters{
+        width: 100%;
+        left: calc(-100% + 25px)
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .logoTextContainer{
+        display: none;
+    }
 }

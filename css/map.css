@@ -228,21 +228,10 @@ Leaflet fixes
     }
 }
 
-@media only screen and (max-width: 1670px) {
-    .sideMenuLogo h1{
-        display: none;
-    }
-}
 
 @media only screen and (max-width: 930px) {
     #mapFilters{
         width: 100%;
         left: calc(-100% + 25px)
-    }
-}
-
-@media only screen and (max-width: 580px) {
-    .logoTextContainer{
-        display: none;
     }
 }

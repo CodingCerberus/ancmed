@@ -909,3 +909,15 @@ section.mainBody {
  }
 }
 
+@media only screen and (max-width: 580px) {
+  .logoTextContainer{
+      display: none;
+  }
+}
+
+
+@media only screen and (max-width: 1670px) {
+  .sideMenuLogo h1{
+      display: none;
+  }
+}

@@ -20,3 +20,13 @@ function filterToggle() {
 }
 
 
+//display filter menu by default if screen wide enough
+
+window.onload = widthCheck()
+
+function widthCheck(){
+  let pageWidth = document.querySelector("html").offsetWidth
+  if (pageWidth > 930){
+    filterToggle()
+  }
+}

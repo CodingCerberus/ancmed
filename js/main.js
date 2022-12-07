@@ -49,7 +49,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
+  if (document.querySelector("html").offsetWidth <= 930){
+    document.getElementById("mySidenav").style.width = "100%";
+  } else {
   document.getElementById("mySidenav").style.width = "32%";
+  }
   document.getElementById("blurHeader").style.filter = "blur(5px)";
   document.getElementById("blurMainBody").style.filter = "blur(5px)";
   document.getElementById("blurFooter").style.filter = "blur(5px)";

@@ -110,7 +110,7 @@ echo '
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="Home Page; AncMed">
+    	<meta name="description" content="Homepage; AncMed">
     	<meta property="og:title" content="The Ancient Mediterranean Digital Project">
 		<meta property="og:type" content="article" />
 		<meta property="og:description" content="An open access database on ancient Mediterranean ships">
@@ -121,27 +121,30 @@ echo '
 
 
 		<title>AncMed: Homepage</title>
-
-		<!-- external CSS link -->
-		
 		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@600&family=Spartan:wght@100;400;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-		crossorigin=""/>
+
+		<!-- js plugins -->
 		<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
 		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
 		crossorigin=""></script>
 		<script src="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js"></script>
 		<link href="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/map.css">
-		<link rel="stylesheet" href="css/rSlider.min.css">
 		<script src="js/rSlider.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin=""/>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/map.css">
+		<link rel="stylesheet" href="css/rSlider.min.css">
 	</head>
 	<body>
 		<header>

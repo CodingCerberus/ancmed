@@ -201,17 +201,23 @@ $conn->query($q0);
 <meta property="og:url" content="https://ancmed.ulb.be/">
 <meta name="twitter:card" content="Ancmed Logo">
 
+<title>AncMed: Search Database</title>
 <link rel="shortcut icon" href="img/favicon.ico" />
+
+<!-- fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&family=Spartan:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
+
+<!-- js plugins -->
+<script src="js/rSlider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- stylesheets -->
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/searchpage.css">
 <link rel="stylesheet" href="css/rSlider.min.css">
-<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
-<script src="js/rSlider.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</style>
 </head>
 <body>';
 

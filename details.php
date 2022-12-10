@@ -76,18 +76,22 @@ $row = $_GET['row'];
     	<meta name="keywords" content="one, two, three">
 
 		<title>AncMed: <?php echo $row2['number']; ?></title>
-
-		<!-- external CSS link -->
 		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&family=Spartan:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
+
+		<!-- js -->
+		<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.0.js"></script>
+		<script src="../js/splide.min.js"></script>
+
+		<!-- stylesheets -->
 		<link rel="stylesheet" href="css/splide.min.css">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="https://kit.fontawesome.com/116673fe69.js" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.0.js"></script>
-		<script src="../js/splide.min.js"></script>
 	</head>
 	<body>
 		<header id="blurHeader">

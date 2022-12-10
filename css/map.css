@@ -8,6 +8,7 @@
 Map Menu 
 //////////////////////// */
 
+
 .mapSection {
     height: calc(100vh - 144px);
 }
@@ -208,14 +209,18 @@ Leaflet fixes
     left: 0 !important;
 }
 
-
-
 /*moving zoom control in top left to accomidate side panel (before it's open) */
 
 .leaflet-control-zoom {
     margin-left: 35px !important;
 }
 
+/* fixing leaflet text and background image overlaps */
+
+a.leaflet-control-zoom-in,
+a.leaflet-control-zoom-out {
+    background-image: none;
+}
 
 /***************** MEDIA QUERIES *****************/
 

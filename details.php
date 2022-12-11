@@ -91,6 +91,7 @@ $row = $_GET['row'];
 		<!-- stylesheets -->
 		<link rel="stylesheet" href="css/splide.min.css">
 		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/navmenu.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>

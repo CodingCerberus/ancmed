@@ -216,6 +216,7 @@ $conn->query($q0);
 
 <!-- stylesheets -->
 <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/navmenu.css">
 <link rel="stylesheet" href="css/searchpage.css">
 <link rel="stylesheet" href="css/rSlider.min.css">
 </head>

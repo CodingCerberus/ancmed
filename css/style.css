@@ -94,67 +94,6 @@ header li {
   padding: 20px 10px;
 }
 
-nav#menuButton, nav.staticNoAction {
-  position: absolute;
-  width: 45px;
-  top: 50px;
-  right: 69px;
-  padding-bottom: 7px;
-  padding-right: 5px;
-  transform: scaleX(-1);
-  cursor: pointer;
-}
-
-nav#menuButton span, nav.staticNoAction span {
-  display: block;
-  height: 1px;
-  border-bottom: solid 2px rgb(56, 56, 56);
-  width: 30px;
-  transition: 0.7s;
-}
-
-nav#menuButton {
-  z-index: 2;
-}
-
-/* nav#menuButton :nth-child(1) {
-  width: 20px;
-}
-
-nav#menuButton :nth-child(2) {
-  width: 15px;
-}
-
-nav#menuButton :nth-child(3) {
-  width: 10px;
-} */
-
-nav#menuButton:hover :nth-child(1){
-width: 0;
-transition: 1s;
-}
-
-nav#menuButton:hover :nth-child(2){
-  width: 0;
-  transition: 1s;
-  transition-delay: 0.2s; 
-}
-
-nav#menuButton:hover :nth-child(3){
-  width: 0;
-  transition: 1s;
-  transition-delay: 0.4s; 
-}
-
-
-nav.staticNoAction {
-  z-index: 0;
-}
-
-nav.staticNoAction span {
-  border-bottom: solid 2px rgb(187, 187, 187);
-}
-
 /******************************************
 /* Main Body
 /*******************************************/
@@ -441,13 +380,6 @@ footer p {
   font-size: 1.6rem;
 }
 
-
-
-
-
-
-
-
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -579,144 +511,6 @@ m15.5
 4.4 
 14.6-14.6 
 4.4-4.3-4.4-4.4-14.6-14.6z */
-
-
-/* Slide Out Menu */
-
-/* The side navigation menu */
-.sidenav {
-  height: 100%;
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Stay on top */
-  top: 0; /* Stay at the top */
-  right: 0;
-  background-color: rgb(211, 211, 211);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.3 second transition effect to slide in the sidenav */
-}
-
-.sidenav * {
-  white-space: nowrap;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: rgb(38, 38, 38);
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 57px;
-  right: 72px;
-  font-size: 3rem;
-  cursor: pointer;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-/* Further Side Menu Customisation */
-
-.sideMenuLogo h1 {
-  display: inline;
-  position: absolute;
-  left: auto;
-}
-
-
-div.sideMenuLogo {
-  position: absolute;
-  top: 43px;
-  left: 44px;
-}
-
-.sideMenuLinks {
-  margin-top: 100px;
-  margin-left: 70px;
-  padding-left: 0;
-}
-
-.sideMenuLinks a {
-  font-size: 1.6rem;
-  width: fit-content;
-  padding-left: 0;
-  margin-top: 48px;
-}
-
-.searchContainer {
-  height: auto;
-  width: 60%;
-  position: relative;
-  margin-bottom: 12px;
-}
-
-
-
-.searchContainer img {
-  height: 15px;
-  margin-left: -7px;
-}
-
-.searchContainer * {
-  border-width: 0;
-  background-color: rgb(211, 211, 211);
-}
-
-.searchContainer form {
-  border-bottom: solid 1px rgb(56, 56, 56);
-  padding-bottom: 10px;
-}
-
-.searchContainer * {
-  height: inherit;
-}
-
-.searchContainer input {
-  font-size: 1.6rem;
-  font-weight: 300;
-  width: 90%;
-}
-
-.searchContainer input[type=text]:focus {
-  outline: none;
-}
-
-
-a.closebtn {
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-
-a.closebtn nav span {
-  display: block;
-  height: 1px;
-  border-bottom: solid 2px rgb(56, 56, 56);
-  width: 30px;
-  margin-bottom: 7px;
-}
 
 /* Modal Section */
 
@@ -907,17 +701,4 @@ section.mainBody section.gallerySection, section.mainBody > section {
 section.mainBody {
   display: block;
  }
-}
-
-@media only screen and (max-width: 580px) {
-  .logoTextContainer{
-      display: none;
-  }
-}
-
-
-@media only screen and (max-width: 1670px) {
-  .sideMenuLogo h1{
-      display: none;
-  }
 }

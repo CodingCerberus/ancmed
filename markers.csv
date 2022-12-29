@@ -3,6 +3,7 @@ achziv,33.047778,35.102222,Achziv
 agiaTriada,35.058889,24.7925,Agia Triada
 aigina,37.73,23.49,Aigina
 akko,32.927778,35.081667,Akko
+Akrotiri ,36.351389,25.403611,Akrotiri 
 amathus,34.7125,33.141667,Amathus
 anavyssos,37.733333,23.95,Anavyssos
 argos,37.616667,22.716667,Argos
@@ -30,7 +31,7 @@ hama,35.133333,36.75,Hama
 gazi,35.325,25.066667,Gazi
 gurob,29.2,30.95,Gurob
 halaSultanTekke,34.885277,33.610013,Hala Sultan Tekke
-idaeanCave,35.20888308739201,24.8290261,Idaean Cave
+idaeanCave,35.20888309,24.8290261,Idaean Cave
 iklaina,36.995,21.723333,Iklaina
 ithaca,38.366667,20.716667,Ithaca
 kalapodi,38.634167,22.885,Kalapodi
@@ -80,9 +81,11 @@ skyros,38.883333,24.516667,Skyros
 sounion,37.652,24.026,Sounion
 sparta,37.081944,22.423611,Sparta
 tanagra,38.316667,23.533333,Tanagra
+TelAbelBethMaacah ,33.257,35.58,Tel Abel Beth Maacah 
 tellAbuHawam,32.800833,35.019167,Tell Abu Hawam
 telDor,32.6175,34.9175,Tel Dor
 tellElDaba,30.783333,31.833333,Tell el Dab'a
+TellelFarahSouth ,31.282444,34.482694,Tell el Far’ah South 
 tellHalaf,36.8266,40.0396,Tell Halaf
 tellMiqneEkron,31.77889,34.84992,Tell Miqne Ekron
 tellTweini,35.371667,35.936389,Tell Tweini
@@ -94,7 +97,7 @@ tilBarsip,36.674,38.121,Til Barsip
 tiryns,37.599444,22.8,Tiryns
 tragana,37.007,21.668,Tragana
 ugarit,35.602,35.782,Ugarit
-vathyrkakas,35.350,33.183,Vathyrkakas
+vathyrkakas,35.35,33.183,Vathyrkakas
 voundeniamygdalia,38.253706,21.7808,"Voundeni, Amygdalia"
 yialousa,35.535556,34.189444,Yialousa
 zawyetUmmElRakham,31.4,27.025833,Zawiyet Umm el-Rakham

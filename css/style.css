@@ -182,6 +182,28 @@ section.collapseBuffer {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/*styling for any grids that appear*/
+
+tr > td:first-child{
+  font-weight: bolder;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+td + td{
+  border: 1px solid black;
+}
+
+td{
+  padding: 6px;
+}
+
+.content table + p{
+  padding-top: 2px;
+  font-size: 0.8em ;
+}
+
 
 .active, .collapsible:hover {
   background-color: rgb(231, 231, 231);

@@ -423,16 +423,19 @@ $row = $_GET['row'];
 									</div>';
 								}
 							}
+
+							echo '</div>';
 						}
+						echo '</div>';
+						echo '</div>';
+
 					}
 				 
                   $result->close();
                   $conn->close();
 			 
 			 ?>
-		</div>
-	</div>
-</div>
+
 
 
 		<footer id="blurFooter">

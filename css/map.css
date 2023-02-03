@@ -197,7 +197,7 @@ Leaflet fixes
 
 /* Correcting pop arrow */
 
-.leaflet-popup-tip {
+/* .leaflet-popup-tip {
     width: 20px;
     height: 20px;
     border: none;
@@ -207,6 +207,10 @@ Leaflet fixes
 
 .leaflet-popup-tip-container {
     left: 0 !important;
+} */
+
+.leaflet-popup-tip{
+    display: none;  /*removed at client request*/
 }
 
 /*moving zoom control in top left to accomidate side panel (before it's open) */

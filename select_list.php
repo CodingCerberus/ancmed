@@ -33,13 +33,13 @@ $figureheads = array("bird-head (inward facing)", "bird-head (outward-facing)", 
                           "lion head", "mismatched devices", "sea dragon", "stempost device", "sternpost device", "undecorated flat top", "zoomorphic");
 
 //Findspot: 
-$findspot = array("Abydos", "Achziv", "Agia Triada", "Aigina", "Akko", "Amathus", "Anavyssos", "Argos", "Ashkelon", "Asine", "Athens", "Bademgedigi Tepe", "Balawat", "Beth Shemesh", "Byblos", 
+$findspot = array("Abydos", "Achziv", "Agia Triada", "Aigina", "Akko", "Akrotiri", "Amathus", "Anavyssos", "Argos", "Ashkelon", "Asine", "Athens", "Ayia Irini", "Bademgedigi Tepe", "Balawat", "Beth Shemesh", "Byblos", 
                 "Caere", "Carmel Ridge", "Chaeronea", "Chania", "Dirmil", "Dramesi", "Dur-Sarruken", "Ekron", "Elean Pylos", "Eleusis", "Eleutherae", "Eleutherna", "Enkomi", "Epidauros", "Eretria", 
-                "Hama", "Gazi", "Gurob", "Hala Sultan Tekke", "Idaean Cave", "Iklaina", "Ithaca", "Kalapodi", "Kalochorafitis", "Karnak", "Karpas Peninsula", "Kalokhorio Klirou", "Karatepe", 
-                "Kastanas", "Kavousi", "Kazaphani", "Keos", "Khalasmenos", "Kition", "Knossos", "Kos", "Kynos", "Lefkandi", "Liman Tepe", "Limassol", "Luxor", "Lysi", "Maroni", "Medinet Habu", 
+                "Hama", "Gazi", "Gurob", "Hala Sultan Tekke", "Idaean Cave", "Iklaina", "Ithaca", "Jerusalem", "Kalapodi", "Kalochorafitis", "Karnak", "Karpas Peninsula", "Kalokhorio Klirou", "Karatepe", 
+                "Kastanas", "Kavousi", "Kazaphani", "Keos", "Khalasmenos", "Kition", "Knossos", "Kos", "Koukos Sykias", "Kynos", "Lefkandi", "Liman Tepe", "Limassol", "Luxor", "Lysi", "Maroni", "Medinet Habu", 
                 "Megara Hyblaea", "Methana", "Moulki", "Mycenae", "Nimrud", "Nineveh", "Orchomenos", "Ormidhia", "Oropos", "Palaepaphos", "Patriki", "Phaistos", "Phylakopi", "Pithekoussai", 
-                "Platea", "Pylos", "Salamis", "Santa Maria de Oia", "Saqqara", "Sidon", "Sinda", "Skyros", "Sounion", "Sparta", "Tanagra", "Tell Abu Hawam", "Tel Dor", "Tell el Dab'a", "Tell Halaf", "Tell Miqne Ekron", 
-                "Tell Tweini", "Teneida", "Thebes (Egypt)", "Thebes (Aegean)", "Thisbe", "Til Barsip", "Tiryns", "Tragana", "Ugarit", "Vathyrkakas", "Voundeni (Amygdalia)", "Yialousa", 
+                "Platea", "Pylos", "Salamis", "Santa Maria de Oia", "Saqqara", "Sidon", "Sinda", "Skyros", "Sounion", "Sparta", "Tanagra", "Tel Abel Beth Maacah", "Tel Dor", "Tell Abu Hawam", "Tell el Dab'a", "Tell el-Far'ah (South)", "Tell Halaf", "Tell Miqne Ekron", 
+                "Tell Tweini", "Teneida", "Thebes (Aegean)", "Thebes (Egypt)", "Thisbe", "Til Barsip", "Tiryns", "Tragana", "Ugarit", "Vathyrkakas", "Voundeni (Amygdalia)", "Yialousa", 
                 "Zawiyet Umm el-Rakham");
 
 ?>

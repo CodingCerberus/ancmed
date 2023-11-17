@@ -34,7 +34,7 @@ $figureheads = array("bird-head (inward facing)", "bird-head (outward-facing)", 
 
 //Findspot: 
 $findspot = array("Abydos", "Achziv", "Agia Triada", "Aigina", "Akko", "Amathus", "Anavyssos", "Argos", "Ashkelon", "Asine", "Athens", "Bademgedigi Tepe", "Balawat", "Beth Shemesh", "Byblos", 
-                "Caere", "Carmel Ridge", "Chaeronea", "Dirmil", "Dramesi", "Dur-Sarruken", "Ekron", "Elean Pylos", "Eleusis", "Eleutherae", "Eleutherna", "Enkomi", "Epidauros", "Eretria", 
+                "Caere", "Carmel Ridge", "Chaeronea", "Chania", "Dirmil", "Dramesi", "Dur-Sarruken", "Ekron", "Elean Pylos", "Eleusis", "Eleutherae", "Eleutherna", "Enkomi", "Epidauros", "Eretria", 
                 "Hama", "Gazi", "Gurob", "Hala Sultan Tekke", "Idaean Cave", "Iklaina", "Ithaca", "Kalapodi", "Kalochorafitis", "Karnak", "Karpas Peninsula", "Kalokhorio Klirou", "Karatepe", 
                 "Kastanas", "Kavousi", "Kazaphani", "Keos", "Khalasmenos", "Kition", "Knossos", "Kos", "Kynos", "Lefkandi", "Liman Tepe", "Limassol", "Luxor", "Lysi", "Maroni", "Medinet Habu", 
                 "Megara Hyblaea", "Methana", "Moulki", "Mycenae", "Nimrud", "Nineveh", "Orchomenos", "Ormidhia", "Oropos", "Palaepaphos", "Patriki", "Phaistos", "Phylakopi", "Pithekoussai", 

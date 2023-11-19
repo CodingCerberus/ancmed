@@ -129,11 +129,11 @@
 			<section class="keyReadings">
 				<h2>Major Synthetic Works</h2>
 				<div class="entryWrapper">
-					<p><strong>Basch, L. 1987.</strong> <em>Le musée imaginaire de la marine antique.</em> Athens: Institut Hellénique pour la préservation de la tradition nautique.</p><a href="Bibliography/Basch, Musée imaginaire (1987) Chapters 1-4.pdf"><img class="downloadIcon" src="img/pdf_icon.png" alt="download available"></a>
-					<p><strong>Gray, D. 1974.</strong>  <em>Seewesen.</em> Göttingen: Vandenhoeck und Ruprecht.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
-					<p><strong>Wachsmann, S. 1998.</strong> <em>Seagoing Ships & Seamanship in the Bronze Age Levant.</em> College Station, TX: Texas A&M University Press.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
-					<p><strong>Wedde, M. 2000.</strong>  <em>Towards a Hermeneutics of Aegean Bronze Age Ship Imagery.</em> Peleus Studien zur Archäologie und Geschichte Griechenlands und Zyperns, vol. 6. Bibliopolis: Mannheim and Möhnsee.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
-					<p><strong>Westerberg, K. 1983.</strong> <em>Cypriote Ships from the Bronze Age to c. 500 B.C. </em> SIMA, Pocket-books, 22. Göteborg: P. Åströms förlag.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
+					<p><strong>Basch, L.</strong> 1987. <em>Le musée imaginaire de la marine antique.</em> Athens: Institut Hellénique pour la préservation de la tradition nautique.</p><a href="Bibliography/Basch, Musée imaginaire (1987) Chapters 1-4.pdf"><img class="downloadIcon" src="img/pdf_icon.png" alt="download available"></a>
+					<p><strong>Gray, D.</strong> 1974.  <em>Seewesen.</em> Göttingen: Vandenhoeck und Ruprecht.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
+					<p><strong>Wachsmann, S.</strong> 1998. <em>Seagoing Ships & Seamanship in the Bronze Age Levant.</em> College Station, TX: Texas A&M University Press.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
+					<p><strong>Wedde, M.</strong> 2000.  <em>Towards a Hermeneutics of Aegean Bronze Age Ship Imagery.</em> Peleus Studien zur Archäologie und Geschichte Griechenlands und Zyperns, vol. 6. Bibliopolis: Mannheim and Möhnsee.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
+					<p><strong>Westerberg, K.</strong> 1983. <em>Cypriote Ships from the Bronze Age to c. 500 B.C. </em> SIMA, Pocket-books, 22. Göteborg: P. Åströms förlag.</p><a href="#"><img class="downloadIcon" src="img/pdf_icon_grey.png" alt="download not available" title="download not available"></a>
 				</div>
 			</section>
 

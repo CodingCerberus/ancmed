@@ -367,6 +367,13 @@ $row = $_GET['row'];
 								<div id="thumbnail-slider" class="splide">
 								<div class="splide__track">
 									<ul class="splide__list">';
+						if($row2['model3d'] != "")
+						{
+							echo '<li class="splide__slide">
+							<img src="https://ancmed.ulb.be/360icon.png">
+							</li>';
+						}
+
 						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{
 							for ($j = 0 ; $j < $rowsImg ; $j++)

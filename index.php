@@ -327,9 +327,8 @@ echo '
 		  removeOptFigureHeads();
 		  removeOptSlider();
 		}
-		</script>
-
-		<script>
+' .
+'
 			function SliderChanged(values)
             {
                 document.getElementById("f1").value = mySlider.getValueStart().toString();
@@ -368,6 +367,11 @@ setTimeout(function()
 	   
 	   return false;
 	});
+
+	window.addEventListener("load", function () {
+		window.dispatchEvent(new Event("resize"));
+	  })
+
 	</script>
 	</body>
 </html>

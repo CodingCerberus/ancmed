@@ -13,7 +13,7 @@ $context = array("funerary", "import", "monumental", "sea", "settlement", "templ
 
 // Thematic features:
 $thematic_features = array( "anchor", "archer", "architecture", "axe", "cargo", "combat", "corpses", "complex narrative", "crew", "deity", "festoons", "fishing", "helmets", "helmsman", "human figures", "mast handling", "multiple ships", "naval combat", "ritual", "rowers", "sail handling", "seashore", "shields", "shipwreck", 
-                         "spears", "tribute", "warriors", "women"); 
+                         "spears", "tree", "tribute", "warriors", "women"); 
                          
 
 // Decorative filler: 
@@ -24,8 +24,8 @@ $functional_features = array("holes", "inscription", "suspension holes", "wheels
 //Ship type: 
 $ship_type = array("br ship", "double-levelled galley", "galley", "hybrid galley", "merchantman", "Minoan sailing ship", "small boat", "mns ship", "three-levelled galley");
 //Technical features: 
-$technical_features = array( "aftercastle", "anchor", "awning", "bench", "bow projection", "brails", "crow's nest", "deck", "deck house", "down-curving yard", "figurehead", "forecastle", "furled sail", "half deck", "Ikrion", "keel", "latticed stempost", "mast", "mast socket", "mast-step", "oars", "oarports", "occulus", "open rower's gallery",     
-                         "proembolon", "railing", "ram", "ram sheathing", "ribs", "rigging",  "sail", "screen", "sprit", "stempost decoration",       
+$technical_features = array( "aftercastle", "anchor", "awning", "bench", "bilge", "bow projection", "brails", "crow's nest", "deck", "deck house", "down-curving yard", "figurehead", "forecastle", "furled sail", "half deck", "Ikrion", "keel", "latticed stempost", "mast", "mast socket", "mast-step", "oars", "oarports", "occulus", "open rower's gallery",     
+                         "proembolon", "railing", "ram", "ram sheathing", "ribs", "rigging",  "sail", "screen", "sprit", "steering oar", "stempost decoration",       
                           "tholepins", "through-beams", "thwarts", "transverse beam", "wales", "yard");    
                          
 //Figureheads: 

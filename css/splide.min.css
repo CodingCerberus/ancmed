@@ -92,7 +92,7 @@
 }
 
 .splide__track {
-    overflow:hidden;
+    /*overflow:hidden; removed to fix copywrite text*/
     position:relative;
     z-index:0
 }

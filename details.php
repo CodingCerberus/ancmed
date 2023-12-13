@@ -93,6 +93,8 @@ $row = $_GET['row'];
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/navmenu.css">
 		<link rel="stylesheet" href="css/style.css">
+
+
 	</head>
 	<body>
 		<header id="blurHeader">
@@ -350,7 +352,7 @@ $row = $_GET['row'];
 										<div>
 											<img  class="tooltip mainImageIcons" src="img/copyright_thin_icon_small.png" alt="copyright icon">
 											<span class="tooltiptext">&copy; ' . $rowImg['copyright_information'] . '</span>
-											<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide(1)">
+											<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide('. ($j + 1) . ')">
 										</div>
 									</li>';
 
@@ -470,5 +472,10 @@ $row = $_GET['row'];
 
 
 		<script type="text/javascript" src="js/main.js"></script>
+
+		<!--Right click disable js for copy protection-->
+		<script>document.addEventListener('contextmenu', event => {
+    		event.preventDefault();
+		});</script>
 	</body>
 </html>

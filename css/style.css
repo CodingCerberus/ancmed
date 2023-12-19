@@ -450,10 +450,10 @@ div#main-slider {
 }
 
 
-#main-slider .splide__track,
+/* #main-slider .splide__track,
 .splide__slide img {
-  /* max-height: 75vh; */
-}
+  max-height: 75vh;
+} */
 
 
 /* this is for fixing gallery height and centering the contents on both axis */
@@ -688,6 +688,7 @@ img.hover-shadow {
 }
 
 .tooltip ~ .tooltiptext {
+  overflow: visible;
   visibility: hidden;
   background-color: rgb(249, 249, 249);
   color: rgb(39, 39, 39);

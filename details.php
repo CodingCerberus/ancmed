@@ -417,9 +417,12 @@ $row = $_GET['row'];
 										</div>';
 								}
 							}
+						}
 
-							echo '<div class="dots">';
+						echo '<div class="row">';
 
+						for($k = 0 ; $k < count($individual_images) ; $k ++)
+						{
 							for ($j = 0 ; $j < $rowsImg ; $j++)
 							{
 								$result->data_seek($j);
@@ -432,9 +435,8 @@ $row = $_GET['row'];
 									</div>';
 								}
 							}
-
-							echo '</div>';
 						}
+						echo '</div>';
 						echo '</div>';
 						echo '</div>';
 

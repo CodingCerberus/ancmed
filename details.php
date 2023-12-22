@@ -401,8 +401,8 @@ $row = $_GET['row'];
 
 						echo '<div id="Lightbox" class="modal">
 						<span class="close pointer" onclick="closeLightbox()">&times;</span>
-						<div class="modal-content">';
-						
+						<div class="modal-content">
+						<div class="main-modal">';
 						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{
 							for ($j = 0 ; $j < $rowsImg ; $j++)
@@ -419,7 +419,9 @@ $row = $_GET['row'];
 							}
 						}
 
-						echo '<div class="row">';
+						echo '</div>
+						
+						<div class="row">';
 
 						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{

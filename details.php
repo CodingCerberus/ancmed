@@ -274,7 +274,7 @@ $row = $_GET['row'];
                      $result->data_seek($j);
                      $row = $result->fetch_array(MYSQLI_ASSOC);
                      
-                     echo '<a href="https://ancmed.ulb.be/details.php?row=' . $row['main_id'] . '" ' . (($j - 1)%3 == 0 ? ' class="middleRelated" > ' : ' > ') . 
+                     echo '<a href="https://ancmed.ulb.be/details.php?row=' . $row['main_id'] . '" ' . (($j - 1)%3 == 0 ? ' class="middleRelated" > ' : ' target="_blank"> ') . 
                               ' <section>
                                  <div class="thumbnailWrapper">';
                      echo ' <img src="' . (($row['image_path'] !="") ? substr($row['image_path'], 1) : "") . '">

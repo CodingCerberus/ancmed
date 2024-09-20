@@ -1,0 +1,752 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/* DELETE THIS LATER!!!! */
+.medMap {
+  width: 100%;
+}
+
+
+/******************************************
+/* Header
+/*******************************************/
+
+
+html {
+  background-color: rgb(249, 249, 249);
+  font-size: 10px;
+}
+
+html * {
+  font-family: "spartan", sans-serif;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  height: 144px;
+}
+
+header * {
+  font-family: "spartan", sans-serif;
+  font-weight: 700;
+  color: rgb(41, 41, 41);
+  font-size: 2rem;
+}
+
+header h1, div.sideMenuLogo h1 {
+  padding-top: 2px;
+  padding-left: 18px;
+  font-weight: 700;
+  line-height: 2.4rem;
+  font-size: 1.8rem;
+}
+
+header section.logoTextContainer h1 + h1 {
+  display: block;
+  clear: both;
+}
+
+div.sideMenuLogo h1 + h1 {
+  top: 35px;
+}
+
+div.sideMenuLogo section {
+  display: inline;
+}
+
+header span {
+  font-size: 46px;
+  font-weight: 100;
+  color: rgb(89, 89, 89);
+  padding-top: 7px;
+  margin-left: 5px;
+}
+
+header li {
+  font-weight: 400;
+}
+
+header div {
+  padding-left: 85px;
+  padding-top: 50px;
+}
+
+header div * {
+  float: left;
+}
+
+header img, div.sideMenuLogo img {
+  height: 46px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+}
+
+header li {
+  padding: 20px 10px;
+}
+
+/******************************************
+/* Main Body
+/*******************************************/
+
+section.mainBody {
+  background: linear-gradient(rgb(235, 235, 235), rgb(249, 249, 249) 70px);
+  clear: both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Left Side */
+
+section.mainBody > section { /*left content, including collapsing boxes*/
+  width: 45%;
+}
+
+
+
+section span.backToResults { /*Back to search results button*/
+  margin-left: 8.8%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  display: block;
+  font-size: 1.6rem;
+}
+
+section span.backToResults i {
+  padding-right: 20px;
+}
+
+section h2 { /* Item name */
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  margin-left: 8.8%;
+  margin-right: 6.7%;
+  margin-bottom: 12px;
+  border-bottom: solid 1px rgb(211, 211, 211);
+}
+
+section.mainBody section.wrapper {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-gap: 2em;
+  font-size: 1.55rem;
+  line-height: 2rem;
+  margin-top: 45px;
+  margin-left: 11.3%;
+  margin-right: 6.7%;
+  padding-bottom: 50px;
+}
+
+.listCategories {
+  font-weight: 700;
+}
+
+
+/* Collapsible boxes */
+
+section.collapsingArea {
+  border-top: solid 1px rgb(211, 211, 211);
+  margin-left: 11.3%;
+  margin-right: 6.7%;
+  padding-top: 50px;
+}
+
+section.collapseBuffer {
+  margin-bottom: 28px;
+}
+
+.collapsible {
+  border-radius: 50px;
+  background-color: #FFF;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.6em;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/*styling for any grids that appear*/
+
+/* tr > td:first-child{
+  font-weight: bolder;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+td + td{
+  border: 1px solid black;
+} */
+
+table, td, th, tr{
+  border: 1px solid black;
+}
+
+th{
+  font-weight: bolder;
+}
+
+td{
+  padding: 6px;
+}
+
+.content table + p{
+  padding-top: 2px;
+  font-size: 0.8em ;
+}
+
+
+.active, .collapsible:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0px;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.content p {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  text-align: justify;
+}
+
+.collapsible:after {
+  content: '+';
+  font-size: 1.5rem;
+  color: rgb(56, 56, 56);
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.active:after {
+  content: "-";
+}
+
+
+.spaceDelete {
+  letter-spacing: -1.5px; /*for biblio dash spacing*/
+}
+
+/* related objects styling*/
+
+div.relatedObjects { /*need display overflow here, done in main.js*/
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+div.relatedObjects a:nth-child(3n+2) {
+  margin-left: 2.75%;
+  margin-right: 2.75%;
+}
+
+div.relatedObjects a {
+  margin-top: 20px;
+  padding: 15px;
+  width: 31.5%;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+div.relatedObjects a section {
+  height: 100%;
+}
+
+.thumbnailWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  margin: auto;
+}
+
+.thumbnailWrapper img {
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+div.relatedObjects a:hover img {
+  max-height: 90%;
+  max-width: 90%;
+  transition: 0.1s;
+}
+
+.relatedObjects h4 {
+  font-weight: 500;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.relatedObjects span {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.spanSpacer {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.greySpacer {
+  color: #CFCBC6;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+div.relatedObjects a:hover {
+  background-color: white;
+  box-shadow: 10px 10px 25px rgb(204, 204, 204);
+  transition: 0.3s;
+}
+
+/* Right Side */
+
+section.mainBody section.gallerySection {
+  width: 55%;
+  margin-right: 74px;
+  margin-top: 40px;
+}
+
+iframe {
+  width: 100%;
+  min-height: 75vh;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/******************************************
+/* Footer
+/*******************************************/
+
+
+
+footer {
+  display: block;
+  clear: both;
+  background-color: rgb(249, 249, 249);
+  margin-top: 220px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin: 20px 24px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+footer li.socialMedia {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #CFCBC6;
+}
+
+footer li.socialMedia i {
+  color: white;
+}
+
+footer li.rightAlign {
+  margin-right: 24px;
+  margin-left: auto;
+}
+
+.rightGutter {
+  margin-right: 74px;
+  margin-left: 0;
+}
+
+.leftGutter {
+margin-left: 74px;
+margin-right: 0;
+}
+
+footer li.leftAlign {
+  margin-right: auto;
+}
+
+li.invisible {
+  visibility: hidden;
+}
+
+
+footer p {
+  text-align: center;
+  padding-top: 135px;
+  padding-bottom: 20px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+/* Splide */
+
+#main-slider {
+  margin-bottom: 20px;
+}
+
+#main-slider img {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#main-slider p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  height: 1.2em;
+}
+
+.splide__slide div {
+  position: absolute;
+  font-size: 20px;
+  bottom: 0;
+  right: 10px;
+  width: fit-content;
+}
+
+.splide__slide div i {
+  margin-left: 2rem;
+}
+
+
+.splide__slide img {
+  max-width: 100%;
+  height: auto;
+  max-height: 75vh;
+}
+
+div#main-slider {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* #main-slider .splide__track,
+.splide__slide img {
+  max-height: 75vh;
+} */
+
+
+/* this is for fixing gallery height and centering the contents on both axis */
+#main-slider {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.splide__slide {
+  opacity: 0.8;
+}
+
+
+.splide__slide.is-active {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+
+#thumbnail-slider .splide__slide {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/*THIS SECTION IS BECAUSE OF SPLIDE*/
+#thumbnail-slider li.splide__slide:hover {
+  transform: scale(1.05);
+  border: none;
+  box-shadow: 0 0 0 1pt rgba(0, 0, 0, 0.05);
+}
+
+section.flexContainer .splide__track {
+  height: 117px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+#thumbnail-slider .splide__slide {
+  background-size: contain !important;
+  background-color: white !important;
+}
+
+/*THIS SECTION IS BECAUSE OF SPLIDE*/
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+div#thumbnail-slider.splide {
+  width: 90%;
+
+}
+
+.splide__arrow--prev {
+  left:-5% 
+}
+
+.splide__arrow--next {
+  right:-5%
+}
+
+/* if you need to change arrow thickness, try changing this number in splide.min.js
+m15.5 
+0.932-4.3 
+4.38 
+14.5 
+14.6-14.5 
+14.5 
+4.3 <<<<<
+4.4 
+14.6-14.6 
+4.4-4.3-4.4-4.4-14.6-14.6z */
+
+/* Modal Section */
+
+/* not doing anything at the moment */
+/* .preview {
+	width: 100%;
+} */
+
+.main-modal{
+  height: calc(80vh - 20px);
+  overflow: auto;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20vh;
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.row > .col {
+  padding: 0 8px;
+}
+
+.col {
+  max-width: 200px;
+}
+
+.col:first-child {
+  margin-left: 0;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 62px 0px 62px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(61, 61, 61, 0.842);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  /* max-width: 1200px; */
+}
+
+.slide {
+  display: none;
+}
+
+.image-slide {
+	max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+}
+
+.modal-preview {
+  height: auto;
+	width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.dots {
+  margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+img.preview, img.modal-preview {
+  opacity: 0.6;
+  border-radius: 8px;
+}
+
+img.active,
+.preview:hover,
+.modal-preview:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 4rem;
+  /* font-weight: bold; */
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Tooltip styling */
+
+.mainImageIcons {
+  border: none !important;
+  border-radius: 0 !important;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tooltip ~ .tooltiptext {
+  overflow: visible;
+  visibility: hidden;
+  background-color: rgb(249, 249, 249);
+  color: rgb(39, 39, 39);
+  font-size: 1.5rem;
+  white-space: nowrap;
+  border-radius: 2px;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: 120%;
+}
+
+.tooltip:hover ~ .tooltiptext {
+  visibility: visible;
+}
+
+
+@media only screen and (min-width: 3000px) {
+.flexContainer .splide__list {
+  justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+section.mainBody section.gallerySection, section.mainBody > section {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+  }
+
+section.mainBody {
+  display: block;
+ }
+}

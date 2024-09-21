@@ -369,12 +369,22 @@ $row = $_GET['row'];
 								<div id="thumbnail-slider" class="splide">
 								<div class="splide__track">
 									<ul class="splide__list">';
+
+						$count3d = count(explode(',', $row2['model3d']));
+
+
 						if($row2['model3d'] != "")
 						{
+							for($k = 0 ; $k < $count3d ; $k ++)
+							{
+
+
 							echo '<li class="splide__slide">
+							<script>console.log("'. $count3d .'")</script>
 							<img src="https://ancmed.ulb.be/360icon.png">
 							</li>';
 						}
+					}
 
 						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{

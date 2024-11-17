@@ -184,7 +184,7 @@ section.collapseBuffer {
 
 /*styling for any grids that appear*/
 
-tr > td:first-child{
+/* tr > td:first-child{
   font-weight: bolder;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
@@ -193,6 +193,14 @@ tr > td:first-child{
 
 td + td{
   border: 1px solid black;
+} */
+
+table, td, th, tr{
+  border: 1px solid black;
+}
+
+th{
+  font-weight: bolder;
 }
 
 td{

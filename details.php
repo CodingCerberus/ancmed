@@ -159,7 +159,8 @@ $row = $_GET['row'];
 				<a href="submit.html">Submit</a>
 				<a href="sponsors.html">Sponsors</a>
 				<a href="about.html">About</a>
-				<a href="donate.html">Donate</a>
+				<a href="copyright.html">Copyright</a>
+				<a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a>
 			</div>
 		</div>
 
@@ -347,12 +348,12 @@ $row = $_GET['row'];
 									// debug_to_console($rowImg['file_path']);	
 /**/
 									echo '<li class="splide__slide">';
-									echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide('. ($j + 1) . ')">';
+									echo '<img src="' . $rowImg['file_path'] . '"  onclick="openLightbox();toSlide('. ($k + 1) . ')">';
 									echo '<p>' . $rowImg['image_description'] . '</p>
 										<div>
 											<img  class="tooltip mainImageIcons" src="img/copyright_thin_icon_small.png" alt="copyright icon">
 											<span class="tooltiptext">&copy; ' . $rowImg['copyright_information'] . '</span>
-											<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide('. ($j + 1) . ')">
+											<img class="mainImageIcons" src="img/fullscreen-icon-grey-small.png" alt="Click for fullscreen" title="click for fullscreen" onclick="openLightbox();toSlide('. ($k + 1) . ')">
 										</div>
 									</li>';
 
@@ -369,12 +370,22 @@ $row = $_GET['row'];
 								<div id="thumbnail-slider" class="splide">
 								<div class="splide__track">
 									<ul class="splide__list">';
+
+						$count3d = count(explode(',', $row2['model3d']));
+
+
 						if($row2['model3d'] != "")
 						{
+							for($k = 0 ; $k < $count3d ; $k ++)
+							{
+
+
 							echo '<li class="splide__slide">
+							<script>console.log("'. $count3d .'")</script>
 							<img src="https://ancmed.ulb.be/360icon.png">
 							</li>';
 						}
+					}
 
 						for($k = 0 ; $k < count($individual_images) ; $k ++)
 						{
@@ -414,6 +425,7 @@ $row = $_GET['row'];
 								{
 									echo '<div class="slide">
 										<img src="'. $rowImg['file_path'] . '" class="image-slide" alt="' . $rowImg['image_description'] . '" />
+										
 										</div>';
 								}
 							}
@@ -433,7 +445,8 @@ $row = $_GET['row'];
 								if($rowImg['ID'] == (int)$individual_images[$k])
 								{								
 									echo '<div class="col">
-										<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide('. ($j + 1) . ')" alt="' . $rowImg['image_description'] . '">
+										<img src="'. $rowImg['file_path'] . '" class="modal-preview" onclick="toSlide('. ($k + 1) . ')" alt="' . $rowImg['image_description'] . '">
+										
 									</div>';
 								}
 							}
@@ -470,7 +483,7 @@ $row = $_GET['row'];
 
 			</ul>
 
-			<p>&copy; 2022 - Ancient Mediterranean Digital Project</p>
+			<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ancmed</span> by <span property="cc:attributionName">Tzveta Manolova</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a></p>
 
 		</footer>
 

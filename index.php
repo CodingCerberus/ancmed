@@ -218,6 +218,7 @@ echo '
 				<a href="submit.html">Submit</a>
 				<a href="sponsors.html">Sponsors</a>
 				<a href="about.html">About</a>
+				<a href="copyright.html">Copyright</a>
 				<a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a>
 			</div>
 		</div>

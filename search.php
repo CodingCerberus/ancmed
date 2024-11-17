@@ -296,6 +296,7 @@ echo '<header id="blurHeader">
    <a href="submit.html">Submit</a>
    <a href="sponsors.html">Sponsors</a>
    <a href="about.html">About</a>
+	<a href="copyright.html">Copyright</a>
    <a href="https://www.paypal.com/donate/?hosted_button_id=4WEMKS7KGC9MG">Donate</a>
 </div>
 </div>
@@ -536,7 +537,7 @@ echo '<section class="displayResultsWrapper">';
 
  </ul>
 
- <p>&copy; 2022 - Ancient Mediterranean Digital Project</p>
+ <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ancmed</span> by <span property="cc:attributionName">Tzveta Manolova</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0</a></p>
 
 </footer>
 <script type="text/javascript" src="js/main.js"></script>

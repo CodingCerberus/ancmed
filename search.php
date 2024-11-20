@@ -22,16 +22,20 @@ $f2 = 0;
 if(isset($_POST['general']) && $_POST["general"] != '')
 {
    $gen = $_POST["general"];
+   $gen2 = "%" . $gen . "%";
  
    //echo
-   $GeneralBig = "SELECT disc.id as id from disc JOIN general_desc ON disc.id=general_desc.id JOIN tech_desc ON disc.id = tech_desc.id WHERE " .
-     "disc.discussion LIKE '%" . $gen . "%' OR general_desc.general_description LIKE '%" . $gen . "%' OR tech_desc.technical_description LIKE '%" . $gen . "%'";
-
-     $result = $conn->query($GeneralBig);
-     if (!$result) die($conn->error);
+   $stmt =  $conn->prepare("SELECT disc.id as id from disc JOIN general_desc ON disc.id=general_desc.id JOIN tech_desc ON disc.id = tech_desc.id WHERE " .
+     "disc.discussion LIKE ? OR general_desc.general_description LIKE ? OR tech_desc.technical_description LIKE ?");
      
+     $stmt -> bind_param("sss", $gen2, $gen2, $gen2);
+     
+     $stmt -> execute();
+     $result = $stmt->get_result();
+
+     if (!$result) die($conn->error);  
      $rows = $result->num_rows;
-     $re = "";
+     $re = '';
      for ($j = 0 ; $j < $rows ; $j++)
      {
         $result->data_seek($j);
@@ -44,9 +48,8 @@ if(isset($_POST['general']) && $_POST["general"] != '')
      
      if($re != "")
      {
-      // echo $re;
-      $re =  $re . "))";
-    }
+        $re =  $re . "))";
+     }
 
  
    //echo
@@ -171,6 +174,8 @@ if(!empty($subSearches))
       $i++;
    }
 }
+
+$SQL = $SQL . " ORDER BY SUBSTRING(number, 1, 1), CAST(REGEXP_SUBSTR(number,'[0-9]+') AS float)";
 
 $q0 = "SET NAMES 'utf8'";
 $conn->query($q0);

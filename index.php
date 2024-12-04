@@ -9,10 +9,19 @@
  $subSearches = array();
  $subSearchesAssoc = array();
 
+ if(htmlspecialchars($_GET["site"]) != null)
+{
+   $sites = array();
+   array_push($sites, htmlspecialchars($_GET["site"]));
+   $_POST['Findspot'] = $sites;
+   session_start();
+}
+
  $f1 = 0;
  $f2 = 0;
 
- session_start();
+ 
+ // session_start();
 
  $Region = get_sql_for_combo("Region", "findspot_region_search", "LIKE");
  if($Region !="")
@@ -49,10 +58,21 @@ if($ShipType !="")
    array_push($subSearchesAssoc, "AND");
 }
 
+if (isset($_SESSION['f1']))
+{
+   $_POST['f1'] = $_SESSION['f1'];
+   unset ($_SESSION['f1']);
+}
+if (isset($_SESSION['f2']))
+{
+   $_POST['f2'] = $_SESSION['f2'];
+   unset ($_SESSION['f2']);
+}
+
+
 if(isset($_POST['f1']) && isset($_POST['f2']))
 {
-	$_SESSION['f1'] = $_POST['f1'];
-	$_SESSION['f2'] = $_POST['f2'];
+
 
 
    $t1 = 2000 - ((int)$_POST["f1"])*50;
@@ -229,6 +249,8 @@ echo '
 
 					<h2>Map Filters</h2>
 					<form method="post" action="index.php">
+						<input type="hidden" id="f1" name="f1" value="2000">
+						<input type="hidden" id="f2" name="f2" value="500">
 
 						<div class="filterContainer">
 
@@ -283,9 +305,6 @@ echo '
 								</div>
 							</section>
 
-							<input type="hidden" id="f1" name="f1" value="2000">
-							<input type="hidden" id="f2" name="f2" value="500">
-
 						</div>
 
 						<section class="filterButtons">
@@ -298,9 +317,6 @@ echo '
 					</form>
 				</div>
 
-				<div class="drawIcon" id="filterButton" >
-					<img src="img/right-arrow.png" alt="right arrow">
-				</div>
 			</div>
 
 			<div id="map"></div>
@@ -309,7 +325,6 @@ echo '
 
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="map1.js"></script>
-		<script type="text/javascript" src="js/map.js"></script>
 
 		<script>
 		function removeOptRegion() { document.getElementById("Region").selectedIndex = "-1"; }
@@ -369,9 +384,6 @@ setTimeout(function()
 	   return false;
 	});
 
-	window.addEventListener("load", function () {
-		window.dispatchEvent(new Event("resize"));
-	  })
 
 	</script>
 	</body>

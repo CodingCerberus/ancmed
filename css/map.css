@@ -16,11 +16,10 @@ Map Menu
 #mapFilters {
     position: absolute;
     top: 144px;
-    /* left: 0px; */
-    left: -16%;
+    left: 0px;
     z-index: 99;
     height: calc(100vh - 144px);
-    width: calc(16% + 25px);
+    width: 16%;
     display: flex;
     background-color: white;
     transition-duration: 0.2s;
@@ -59,9 +58,6 @@ Map Menu
 .rs-container .rs-scale span:first-child ins,
 .rs-container .rs-scale span:last-child ins {
     display: none !important;
-}
-
-.rs-scale span ins {
 }
 
 .filterButtons {
@@ -175,9 +171,6 @@ Bubble Styling
 
 .siteName {
     font-weight: bold;
-}
-
-.objectsFound {
 }
 
 .seeResults {
